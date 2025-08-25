@@ -1,0 +1,923 @@
+<html>
+
+<head>
+  <title>CS388</title>
+  <link rel="stylesheet" type="text/css" href="courses.css">
+</head>
+
+<h1>CS388: Natural Language Processing (online MS version)</h1>
+
+<h3 style="color:red"><b>These materials are from the Fall 2022 version of this course. The Fall 2023 version will feature new video content around large language models (LLMs), RLHF, chain-of-thought prompting,
+and other contemporary topics. Be aware that assignments may change, so we do not recommend working ahead in the course until the new syllabus is posted in August 2023.</b></h3>
+
+<p>These are the course materials for an online masters course in NLP. All lectures are videos available on YouTube.</p>
+
+<p><b>Note on enrollment:</b> if you are a student enrolled on-campus at UT Austin, you are <b>not</b> eligible to take this course. This is a hard requirement from
+the university due to the fact that this course is part of an Option III MS program. There is an on-campus version of CS388 that is typically
+taught once per year by either me, Eunsol Choi, or Ray Mooney, which you are eligible to take. Regardless, you are free to consult the materials here!
+
+<h2>Assignments</h2>
+
+<p><b>If you are currently enrolled in the class, please carefully note the version of each posted assignment here. Assignments from past semesters are subject to change.</b>
+
+<p><b><a href="a1-2022.pdf">[FALL 2022 VERSION] Assignment 1: Linear Sentiment Classification</a></b> <a href="a1-distrib-2022.tgz">[code and dataset download]</a>
+<p><b><a href="a2-2022.pdf">[FALL 2022 VERSION] Assignment 2: Sentiment with Feedforward Neural Networks</a></b> <a href="a2-distrib-2022.tgz">[code and dataset download]</a>
+<p style="text-decoration: line-through;"><b><a href="a3-fa21.pdf">[FALL 2021 VERSION - NOT USED IN FALL 2022] Assignment 3: HMMs and CRFs for NER</a></b> <a href="a3-distrib-fa21.tgz">[code and dataset download]</a>
+<p><b><a href="a4-2022.pdf">[FALL 2022 VERSION] Assignment 4: Character Language Modeling with RNNs</a></b> <a href="a4-distrib-2022.tgz">[code and dataset download]</a>
+<p><b><a href="a5-2022.pdf">[FALL 2022 VERSION] Assignment 5: Transformers</a></b> <a href="a5-distrib-2022.tgz">[code and dataset download]</a>
+<p style="text-decoration: line-through;"><b><a href="a5-fa21.pdf">[FALL 2021 VERSION - NOT USED IN FALL 2022] Assignment 5: Semantic Parsing with Encoder-Decoder Models</a></b> <a href="a5-distrib-fa21.tgz">[code and dataset download]</a>
+<p><b><a href="fp.pdf">[FALL 2022 VERSION] Final Project: Dataset Artifacts</a></b> <a href="https://github.com/gregdurrett/fp-dataset-artifacts">[code and dataset download]</a> <a href="project-ex-1.pdf">[example 1]</a> <a href="project-ex-2.pdf">[example 2]</a> <b><a href="peer-assessment.pdf">[peer assessment instructions]</a></b>
+<!--<p><b><a href="a6.pdf">[SPRING 2021 VERSION] Assignment 6 (Final Project): Domain Adaptation for Question Answering</a></b> <a href="https://github.com/gregdurrett/nlp-qa-finalproj/">[code and dataset download]</a>-->
+
+<h2>Lecture Videos and Readings</h2>
+
+<p><b><a href="https://www.youtube.com/playlist?list=PLofp2YXfp7Tbk88uH4jejfXPd2OpWuSLq">YouTube playlist containing all videos</a></b></p>
+
+<p><b><a href="slides-notes-2022.tgz">Download the slides and handwritten notes here (90MB tgz)</a></b></p>
+
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111"
+  id="AutoNumber5" width="800">
+  <tbody>
+    <tr>
+      <td width="320" height="18"><b>Topics and Videos</b></td>
+      <td width="500" height="18"><b>Readings</b></td>
+    </tr>
+    <tr>
+      <td><a href="https://youtu.be/k5p8teUNHX4">00 Introduction</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="https://youtu.be/DVxR3AwdxoA">01 Linear Binary
+          Classification</a></td>
+      <td>
+        <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein
+          2.0-2.5, 4.2-4.4.1</a><br>
+        <a href="./perc-lr-connections.pdf">Perceptron and logistic regression</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/0jSElGFUxro">
+          02 Sentiment Analysis and Basic Feature Extraction</a></td>
+      <td><a
+          href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein
+          4.1</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/_We4tlPkaj0">03 Basics of
+          Learning, Gradient Descent</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/tMGv5ZcuVP4">04 Perceptron</a>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/hhTkyP7EzGw">05 Perceptron as
+          Minimizing Loss</a>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/0naHFT07ja8">06 Logistic
+          Regression</a>
+      </td>
+      <td><a href="./perc-lr-connections.pdf">Perceptron and LR connections</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/cKbnEmjxnOY">07 Sentiment
+          Analysis</a>
+      </td>
+      <td><a href="https://www.aclweb.org/anthology/W02-1011/" target="_blank">Thumbs up? Sentiment Classification using
+          Machine Learning Techniques</a> Pang et al. 2002<br></br>
+        <a href="https://www.aclweb.org/anthology/P12-2018/" target="_blank">Baselines and Bigrams: Simple, Good
+          Sentiment and Topic Classification</a> Wang and Manning 2012<br></br>
+        <a href="https://www.aclweb.org/anthology/D14-1181/" target="_blank">Convolutional Neural Networks for Sentence
+          Classification</a> Kim 2014<br></br>
+        <a href="https://github.com/sebastianruder/NLP-progress/blob/master/english/sentiment_analysis.md"
+          target="_blank">[Github] </a><a
+          href="https://github.com/sebastianruder/NLP-progress/blob/master/english/sentiment_analysis.md"
+          target="_blank">NLP Progress on Sentiment Analysis</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/65ui-GdtY0Q">08 Optimization
+          Basics</a>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/My6GaGhqxdI">09 Multiclass
+          Classification</a></td>
+      <td>
+        <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein
+          4.2</a><br>
+        <a href="./multiclass.pdf">Multiclass lecture note</a>
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/EA627DC7k6M">10 Multiclass
+          Perceptron and Logistic Regression</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/va2i7LXt9zI">11 Multiclass
+          Classification Examples</a></td>
+      <td><a href="https://www.aclweb.org/anthology/D15-1075/" target="_blank">A large annotated corpus for learning
+          natural language inference</a> Bowman et al. 2015<br></br>
+        <a href="https://www.aclweb.org/anthology/D13-1193/" target="_blank">Authorship Attribution of
+          Micro-Messages</a> Schwartz et al. 2013
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/N4f2-S19LME">11-2 Fairness in
+          Classification</a></td>
+      <td><a href="https://arxiv.org/pdf/1811.10104.pdf" target="_blank">50 Years of Test (Un)fairness: Lessons for
+          Machine Learning</a> Hutchinson and Mitchell 2018<br><br>
+        <a href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G"
+          target="_blank">Amazon scraps secret AI recruiting tool that showed bias against women</a>
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/DU_p-RBy5gM">12 Neural
+          Networks</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/rdohzaGa8aE">13 Neural Network
+          Visualization</a></td>
+      <td><a href="http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/" target="_blank">Neural Networks,
+          Manifolds, and Topology</a></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/8WhPYIWyR5g">14 Feedforward
+          Neural Networks, Backpropagation</a></td>
+      <td><a
+          href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein
+          Chapter 3.1-3.3</a></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/IRZCQO18QAI">15 Neural Net
+          Implementation</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/KPZb2rYS4BE">16 Neural Net
+          Training, Optimization</a></td>
+      <td><a href="https://dl.acm.org/doi/10.5555/2627435.2670313">Dropout: a simple way to prevent neural networks from
+          overfitting</a> Srivastava et al. 2014 <br></br>
+
+        <a href="https://arxiv.org/abs/1502.03167">Batch Normalization: Accelerating Deep Network Training by Reducing
+          Internal Covariate Shift</a> Ioffe and Szegedy 2015<br></br>
+
+        <a href="https://arxiv.org/abs/1412.6980">Adam: A Method for Stochastic Optimization</a> Kingma and Ba
+        2015<br></br>
+
+        <a href="https://papers.nips.cc/paper/2017/hash/81b3833e2504647f9d794f7d7b9bf341-Abstract.html">The Marginal
+          Value of Adaptive Gradient Methods in Machine Learning</a> Wilson et al. 2017
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/8EqQROdVPyM">17 Word
+          Embeddings</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/hznxqCIrzSQ">18 Skip-gram</a>
+      </td>
+      <td><a href="https://papers.nips.cc/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf">Distributed
+          Representations of Words and Phrases and their Compositionality</a> Mikolov et al. 2013</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/gpP-depOUwg">19 Other Word
+          Embedding Methods</a></td>
+      <td><a href="https://papers.nips.cc/paper/2008/hash/1e056d2b0ebd5c878c550da6ac5d3724-Abstract.html"
+          target="_blank">A Scalable Hierarchical Distributed Language Model</a> Mnih and Hinton 2008<br></br>
+        <a href="https://papers.nips.cc/paper/2014/file/feab05aa91085b7a8012516bc3533958-Paper.pdf"
+          target="_blank">Neural Word Embedding as Implicit Matrix Factorization</a> Levy and Goldberg 2014<br></br>
+        <a href="https://www.aclweb.org/anthology/D14-1162/" target="_blank">GloVe: Global Vectors for Word
+          Representation</a> Pennington et al. 2014<br></br>
+        <a href="https://arxiv.org/abs/1607.04606" target="_blank">Enriching Word Vectors with
+          Subword Information</a> Bojanowski et al. 2016
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/J_227g77Jqg">20 Bias in Word
+          Embeddings</a></td>
+      <td><a href="https://papers.nips.cc/paper/2016/file/a486cd07e4ac3d270571622f4f316ec5-Paper.pdf"
+          target="_blank">Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word
+          Embeddings</a> Bolukbasi et al. 2016<br></br>
+        <a href="https://www.aclweb.org/anthology/N19-1062/" target="_blank">Black is to Criminal as Caucasian is to
+          Police: Detecting and Removing Multiclass Bias in Word Embeddings</a> Manzini et al. 2019<br></br>
+        <a href="https://www.aclweb.org/anthology/N19-1061/" target="_blank">Lipstick on a Pig: Debiasing Methods Cover
+          up Systematic Gender Biases in Word Embeddings But do not Remove Them</a> Gonen and Goldberg 2019
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/3pwwdHuH0I4">21 Applying
+          Embeddings, Deep Averaging Networks</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P15-1162/" target="_blank">Deep Unordered Composition Rivals
+          Syntactic Methods for Text Classification</a> Iyyer et al. 2015</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Llw6qfeAWDs">22 Part-of-Speech
+          Tagging</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/yQZ0mDW-U3g">23 Sequence
+          Labeling, Tagging with Classifiers</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/FeLtLLbn4qU">24 Hidden Markov
+          Models</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/dVF7LZkbl9g">
+          25 HMMs: Parameter Estimation</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Ks7IrsjhqSo">
+          26 HMMs: Viterbi Algorithm</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/cGGNQ1m8efs">
+          27 Beam Search</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/wijpAX_LLXo">
+          28 HMMs for POS Tagging</a></td>
+      <td><a href="https://arxiv.org/abs/cs/0003055" target="_blank">TnT - A Statistical Part-of-Speech Tagger</a>
+        Brants 2000<br></br>
+        <a href="https://www.aclweb.org/anthology/W00-1308/" target="_blank">Enriching the Knowledge Sources Used in a
+          Maximum Entropy Part-of-Speech Tagger</a> Toutanvoa and Manning 2000<br></br>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-642-19400-9_14" target="_blank">Part-of-Speech Tagging
+          from 97% to 100%: Is It Time for Some Linguistics?</a> Manning 2011<br></br>
+        <a href="https://www.aclweb.org/anthology/D17-1309.pdf" target="_blank">Natural Language Processing with Small
+          Feed-Forward Networks</a> Botha et al. 2017
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/8AnHsHhiJ4U">
+          29 Conditional Random Fields</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/OpJRWZWxrYc">
+          30 Features for NER</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/SZt1Dqv_KyU">
+          31 Inference and Learning in CRFs</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/aF2LYdSzys0">
+          32 Forward-backward Algorithm</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/4PCk9Jpqsrg">
+          33 NER</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P05-1045/" target="_blank">Incorporating Non-local Information into
+          Information Extraction Systems by Gibbs Sampling</a> Finkel et al. 2005<br></br>
+        <a href="https://www.aclweb.org/anthology/W09-1119/" target="_blank">Design Challenges and Misconceptions in
+          Named Entity Recognition</a> Ratinov and Roth 2009<br></br>
+        <a href="https://www.aclweb.org/anthology/N16-1030/" target="_blank">Neural Architectures for Named Entity
+          Recognition</a> Lample et al.<br></br>
+        <a href="https://www.aclweb.org/anthology/P18-1009/" target="_blank">Ultra-Fine Entity Typing</a> Choi et al.
+        2018
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/zDPUKQKDaMM">
+          34 Constituency Parsing</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/q3dLP9YQLPA">
+          35 Probabilistic Context-Free Grammars</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/QeDb6mSDSqs">
+          36 CKY Algorithm</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/f1o1_bPWzM0">
+          37 Refining Grammars</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P03-1054/" target="_blank">Accurate Unlexicalized Parsing</a> Klein
+        and Manning 2003</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/dbDjKCc4R3E">
+          38 Dependencies</a></td>
+      <td><a href="https://www.aclweb.org/anthology/Q13-1002/" target="_blank">Finding Optimal 1-Endpoint-Crossing
+          Trees</a> Pitler et al. 2013</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/ypoaw7lJ6Rk">
+          39 Transition-based Dependency Parsing</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/AfM2nc4k3zI">
+          40 State-of-the-art Parsers</a></td>
+      <td><a href="https://www.aclweb.org/anthology/W04-3201/" target="_blank">Max-Margin Parsing</a> Taskar et al.
+        2004<br></br>
+        <a href="https://www.aclweb.org/anthology/P14-1022/" target="_blank">Less Grammar, More Features</a> Hall et al.
+        2014<br></br>
+        <a href="https://www.aclweb.org/anthology/P15-1030/" target="_blank">Neural CRF Parsing</a> Durrett and Klein
+        2015<br></br>
+        <a href="https://www.aclweb.org/anthology/P18-1249/" target="_blank">Constituency Parsing with a Self-Attentive
+          Encoder</a> Kitaev and Klein 2018<br></br>
+        <a href="https://www.aclweb.org/anthology/P05-1012/" target="_blank">Online Large-Margin Training of Dependency
+          Parsers</a> McDonald et al. 2005<br></br>
+        <a href="https://www.aclweb.org/anthology/P10-1001/" target="_blank">Efficient Third-Order Dependency
+          Parsers</a> Koo and Collins 2010<br></br>
+        <a href="https://www.aclweb.org/anthology/K17-3002/" target="_blank">Stanford's Graph-based Neural Dependency
+          Parser at the CoNLL 2017 Shared Task</a> Dozat et al. 2017<br></br>
+        <a href="https://www.aclweb.org/anthology/D14-1082/" target="_blank">A Fast and Accurate Dependency Parser using
+          Neural Networks </a>Chen and Manning 2014<br></br>
+        <a href="https://www.aclweb.org/anthology/P16-1231/" target="_blank">Globally Normalized Transition-Based Neural
+          Networks</a> Andor et al. 2016
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/J-yHbD8LYCM">
+          41 n-gram LMs</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Yfug5eIQh5w">
+          42 Smoothing in n-gram LMs</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/59NrmwAdOWA">
+          43 Neural Language Models</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/ielng67Xz8I">
+          44 Basic RNNs, Elman Networks</a></td>
+      <td><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTM
+          Networks</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Hbsuu_nkLWY">
+          45 Gates and LSTMs</a></td>
+      <td><a href="https://arxiv.org/pdf/1510.00726.pdf" target="_blank">A Primer on Neural Network Models for Natural
+          Language Processing</a> Goldberg 2015<br></br>
+        <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTM
+          Networks</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Zf-NqI89iOU">
+          46 RNN Applications</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/NQPiFOz0ZZg">
+          47 RNN Language Modeling</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/rGw1bkW47pU">
+          48 Visualizing LSTMs</a></td>
+      <td><a href="https://arxiv.org/pdf/1506.02078.pdf" target="_blank">Visualizing and Understanding Recurrent
+          Networks</a> Karpathy et al. 2016</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Pgbib3CT74A">
+          49 ELMo</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N18-1202/" target="_blank">Deep Contextualized Word
+          Representations</a> Peters et al. 2018<br></br>
+        <a href="https://www.aclweb.org/anthology/W19-4302/" target="_blank">To Tune or Not to Tune? Adapting Pretrained
+          Representations to Diverse Tasks</a> Peters et al. 2019
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/IVYOhYrI81A">
+          50 Model Theoretic Semantics</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/PWq41mVpiFY">
+          51 Montague Semantics</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/MVVz0AqJz6M">
+          52 CCG</a></td>
+      <td><a href="https://homes.cs.washington.edu/~lsz/papers/zc-uai05.pdf" target="_blank">Learning to Map Sentences
+          to Logical Form: Structured Classification with Probabilistic Categorial Grammars</a> Zettlemoyer and Collins
+        2005</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Aql6ZRSy3tM">
+          53 Seq2seq models</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/QMq9ygRaXHU">
+          54 Seq2seq models: Training and Implementation</a></td>
+      <td><a href="https://arxiv.org/pdf/1506.03099.pdf" target="_blank">Scheduled Sampling for Sequence Prediction with
+          Recurrent Neural Networks</a> Bengio et al. 2015</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/dALxV1NmWBE">
+          55 Seq2seq Semantic Parsing</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P16-1002/" target="_blank">Data Recombination for Neural Semantic
+          Parsing</a> Jia and Liang 2016</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Z9zqGNCl9B0">
+          56 Attention: Problems with seq2seq models</a></td>
+      <td><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation By Jointly Learning
+          To Align And Translate</a> Bahdanau et al. 2015<br></br>
+        <a href="https://arxiv.org/pdf/1410.8206.pdf" target="_blank">Addressing the Rare Word Problem in Neural Machine
+          Translation</a> Luong et al. 2015
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/HmbWb_6MVrU">
+          57 Attention: Model and Implementation</a></td>
+      <td><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation By Jointly Learning
+          To Align And Translate</a> Bahdanau et al. 2015<br></br>
+        <a href="https://arxiv.org/pdf/1508.04025.pdf" target="_blank">Effective Approaches to Attention-based Neural
+          Machine Translation</a> Luong et al. 2015
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/_6MWWdFnGLE">
+          58 Copying and Pointers</a></td>
+      <td><a href="https://arxiv.org/pdf/1410.8206.pdf" target="_blank">Addressing the Rare Word Problem in Neural
+          Machine Translation</a> Luong et al. 2015<br><br>
+        <a href="https://www.aclweb.org/anthology/P16-1002/" target="_blank">Data Recombination for Neural Semantic
+          Parsing</a> Jia and Liang 2016
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/WA16JelEkkg">
+          59 Word Piece and Byte Pair Encoding</a></td>
+      <td><a href="https://arxiv.org/pdf/1508.07909.pdf" target="_blank">Neural Machine Translation of Rare Words with
+          Subword Units</a> Sennrich et al. 2016<br><br>
+        <a href="https://arxiv.org/pdf/2004.03720.pdf" target="_blank">Byte Pair Encoding is Suboptimal for Language
+          Model Pretraining</a> Bostrom and Durret 2020
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/mYGuyFTjvGU">
+          60 Transformers</a></td>
+      <td><a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Attention Is All You Need</a> Vaswani et al.
+        2017</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/9KAZ4-gKj9g">
+          61 Machine Translation Intro</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Oup0DEYJXEQ">
+          62 MT: Framework and Evaluation</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/dzOuPhBmFtE">
+          63 MT: Word alignment</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/mbtk3VCG_2A">
+          64 MT: IBM Models</a></td>
+      <td><a href="https://www.aclweb.org/anthology/C96-2141.pdf" target="_blank">HMM-Based Word Alignment in
+          Statistical Translation</a> Vogel et al. 1996</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/0k8b5jGk-h4">
+          65 Phrase-based Machine Translation</a></td>
+      <td><a href="http://homepages.inf.ed.ac.uk/pkoehn/publications/pharaoh-amta2004.pdf" target="_blank">Pharaoh: A
+          Beam Search Decoder for Phrase-Based Statistical Machine Translation Models</a> Koehn 2004<br><br>
+        <a href="https://www.aclweb.org/anthology/P03-1021/" target="_blank">Minimum Error Rate Training in Statistical
+          Machine Translation</a> Och 2003
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/h7DbgpmQDlw">
+          66 Syntactic Machine Translation</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N04-1035.pdf" target="_blank">What's in a translation rule?</a>
+        Galley et al. 2004</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/xD2aDZKE34U">
+          67 Neural Machine Translation</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P15-1002/" target="_blank">Addressing the Rare Word Problem in
+          Neural Machine Translation</a> Luong et al. 2015<br></br>
+        <a href="https://www.aclweb.org/anthology/D15-1166/" target="_blank">Effective Approaches to Attention-based
+          Neural Machine Translation</a> Luong et al. 2015<br></br>
+        <a href="https://arxiv.org/pdf/1609.08144.pdf" target="_blank">Google's Neural Machine Translation System:
+          Bridging the Gap between Human and Machine Translation</a> Wu et al. 2016<br></br>
+        <a href="https://www.aclweb.org/anthology/P19-1021.pdf" target="_blank">Revisiting Low-Resource Neural Machine
+          Translation: A Case Study</a> Sennrich and Zhang 2019
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/dya_QNFvtiQ">
+          68 BERT: Masked Language Modeling</a></td>
+      <td><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">BERT: Pre-training of Deep Bidirectional
+          Transformers for Language Understanding</a> Devlin et al. 2019</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/g96oi4ihc_E">
+          69 BERT: Model and Applications</a></td>
+      <td><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">BERT: Pre-training of Deep Bidirectional
+          Transformers for Language Understanding</a> Devlin et al. 2019<br></br>
+        <a href="https://www.aclweb.org/anthology/W19-4302/" target="_blank">To Tune or Not to Tune? Adapting Pretrained
+          Representations to Diverse Tasks</a> Peters et al. 2019<br></br>
+        <a href="https://arxiv.org/pdf/1804.07461.pdf" target="_blank">GLUE: A Multi-Task Benchmark and Analysis
+          Platform for Natural Language Understanding</a> Wang et al. 2019<br></br>
+        <a href="https://arxiv.org/pdf/1907.11692.pdf" target="_blank">RoBERTa: A Robustly Optimized BERT Pretraining
+          Approach</a> Liu et al. 2019
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/jyYVkthmJUc">
+          70 GPT-2</a></td>
+      <td><a
+          href="https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+          target="_blank">Language Models are Unsupervised Multitask Learners</a> Radford et al. 2018<br></br>
+      </td>
+    </tr>
+    
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/EpVUJvPES2Y">
+          70b GPT-3</a></td>
+      <td>
+        <a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank">Language Models are Few-Shot Learners</a> Brown
+        et al. 2020
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Ck9E-3QgzjU">
+          71 BART and other pre-training</a></td>
+      <td><a href="https://arxiv.org/abs/1910.13461" target="_blank">BART: Denoising Sequence-to-Sequence Pre-training
+          for Natural Language Generation, Translation, and Comprehension</a> Lewis et al. 2019<br><br>
+        <a href="https://arxiv.org/pdf/1910.10683.pdf" target="_blank">Exploring the Limits of Transfer Learning with a
+          Unified Text-to-Text Transformer</a> Raffel et al. 2020
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/gnUSE0fCbso">
+          72 Reading comprehension intro</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/JRI3RwRBnMY">
+          73 Reading comprehension: setup and baselines</a></td>
+      <td><a href="https://www.aclweb.org/anthology/D13-1020.pdf" target="_blank">MCTest: A Challenge Dataset for the
+          Open-Domain Machine Comprehension of Text</a> Richardson et al. 2013<br></br>
+        <a href="https://www.aclweb.org/anthology/D16-1264/" target="_blank">SQuAD: 100,000+ Questions for Machine
+          Comprehension of Text</a> Rajpurkar et al. 2016
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/vKJRkwdt6Bo">
+          74 Attentive Reader</a></td>
+      <td><a href="https://arxiv.org/pdf/1506.03340.pdf" target="_blank">Teaching Machines to Read and Comprehend</a>
+        Hermann et al. 2015<br></br>
+        <a href="https://www.aclweb.org/anthology/P17-1171.pdf" target="_blank">Reading Wikipedia to Answer Open-Domain
+          Questions</a> Chen et al. 2017
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/a2efd6Fotrk">
+          75 Improved Reading Comprehension</a></td>
+      <td><a href="https://arxiv.org/pdf/1611.01603.pdf" target="_blank">Bi-directional Attention Flow For Machine
+          Comprehension</a> Seo et al. 2017</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/F8hWZ4xaVkA">
+          76 BERT for QA</a></td>
+      <td><a href="https://www.aclweb.org/anthology/D17-1082/" target="_blank">RACE: Large-scale ReAding Comprehension
+          Dataset From Examinations</a> Lai et al. 2017</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/tCvAHmrxPvY">
+          77 Problems with Reading Comprehension</a></td>
+      <td><a href="https://www.aclweb.org/anthology/D17-1215/" target="_blank">Adversarial Examples for Evaluating
+          Reading Comprehension Systems</a> Jia and Liang 2017</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/P-j_zeS0Pa8">
+          78 Open-domain QA</a></td>
+      <td><a href="https://www.aclweb.org/anthology/D17-1082/" target="_blank">RACE: Large-scale ReAding Comprehension
+          Dataset From Examinations</a> Lai et al. 2017<br><br>
+        <a href="https://www.aclweb.org/anthology/P19-1612.pdf" target="_blank">Latent Retrieval for Weakly Supervised
+          Open Domain Question Answering</a> Lee et al. 2019<br><br>
+        <a href="https://ai.google.com/research/NaturalQuestions" target="_blank">Natural Questions</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/jpRwa2iE_z8">
+          79 Multi-hop QA</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N19-1405/" target="_blank">Understanding Dataset Design Choices for
+          Multi-hop Reasoning</a> Chen and Durrett 2019<br></br>
+        <a href="https://openreview.net/forum?id=SJgVHkrYDH" target="_blank">Learning to Retrieve Reasoning Paths over
+          Wikipedia Graph for Question Answering</a> Asai et al. 202
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/Nr0_xYEso-4">
+          80 Explainability in NLP</a></td>
+      <td><a href="https://arxiv.org/pdf/1606.03490.pdf" target="_blank">The Mythos of Model Interpretability</a> Lipton
+        2016<br></br>
+        <a href="https://www.aclweb.org/anthology/P15-1162/" target="_blank">Deep Unordered Composition Rivals Syntactic
+          Methods for Text Classification</a> Iyyer et al. 2015<br></br>
+        <a href="https://arxiv.org/pdf/1812.08951.pdf" target="_blank">Analysis Methods in Neural Language Processing: A
+          Survey</a> Belinkov and Glass 2019
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/ZVElc4CvHpk">
+          81 Local Explanations: Highlights</a></td>
+      <td><a href="https://arxiv.org/pdf/1602.04938.pdf" target="_blank">"Why Should I Trust You?" Explaining the
+          Predictions of Any Classifier</a> Ribeiro et al. 2016<br></br>
+        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Axiomatic Attribution for Deep Networks</a>
+        Sundararajan et al. 2017
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/bXHM5t_ejsc">
+          82 Text Explanations</a></td>
+      <td><a href="https://arxiv.org/pdf/1603.08507.pdf" target="_blank">Generating Visual Explanations</a> Hendricks et
+        al. 2016<br></br>
+        <a href="https://arxiv.org/pdf/2004.05569.pdf" target="_blank">Explaining Question Answering Models through Text
+          Generation</a> Latcinnik and Berant 2020
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/a6u6WM5wcLQ">
+          83 Model Probing</a></td>
+      <td><a href="https://arxiv.org/pdf/1905.05950.pdf" target="_blank">BERT Rediscovers the Classical NLP Pipeline</a>
+        Tenney et al. 2019<br></br>
+        <a href="https://arxiv.org/pdf/1905.06316.pdf" target="_blank">What Do You Learn From Context? Probing For
+          Sentence Structure In Contextualized Word Represenations</a> Tenney et al. 2019
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/RXYaMZcDIWU">
+          84 Annotation Artifacts</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N18-2017/" target="_blank">Annotation Artifacts in Natural Language
+          Inference Data</a> Gururangan et al. 2018<br></br>
+        <a href="https://www.aclweb.org/anthology/S18-2023/" target="_blank">Hypothesis Only Baselines in Natural
+          Language Inference</a> Poliak et al. 2018<br></br>
+        <a href="https://www.aclweb.org/anthology/P18-1176/" target="_blank">Did the Model Understand the Question?</a>
+        Mudrakarta et al. 2018<br></br>
+        <a href="https://www.aclweb.org/anthology/N19-1405/" target="_blank">Understanding Dataset Design Choices for
+          Multi-hop Reasoning</a> Chen and Durrett 2019<br></br>
+        <a href="https://www.aclweb.org/anthology/D18-1009.pdf" target="_blank">Swag: A Large-Scale Adversarial Dataset
+          for Grounded Commonsense Inference</a> Zellers et al. 2018
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/lBDI1CBNe_U">
+          85 Summarization Intro</a></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/QWt2E3m00kA">
+          86 Extractive Summarization</a></td>
+      <td><a href="https://dl.acm.org/doi/10.1145/290941.291025" target="_blank">The use of MMR, diversity-based
+          reranking for reordering documents and producing summaries</a> Carbonell and Goldstein 1998<br></br>
+        <a href="https://www.aaai.org/Papers/JAIR/Vol22/JAIR-2214.pdf" target="_blank">LexRank: Graph-based Lexical
+          Centrality as Salience in Text Summarization</a> Erkan and Radev 2004<br></br>
+        <a href="https://www.aclweb.org/anthology/W09-1802/" target="_blank">A Scalable Global Model for
+          Summarization</a> Gillick and Favre 2009<br></br>
+        <a href="https://www.aclweb.org/anthology/W17-4511/" target="_blank">Revisiting the Centroid-based Method: A
+          Strong Baseline for Multi-Document Summarization</a> Ghalandari 2017
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/Xf4DfKOix-U">
+          87 Neural Extractive Models</a></td>
+      <td><a href="https://arxiv.org/pdf/1903.10318.pdf" target="_blank">Fine-tune BERT for Extractive Summarization</a>
+        Liu 2019</td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/YyEtayaKnhc">
+          88 Compressive Summarization</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P11-1049/" target="_blank">Jointly Learning to Extract and
+          Compress</a> Berg-Kirkpatrick et al. 2011<br></br>
+        <a href="https://www.aclweb.org/anthology/P16-1188/" target="_blank">Learning-Based Single-Document
+          Summarization with Compression and Anaphoricity Constraints</a> Durrett et al. 2016<br></br>
+        <a href="https://www.aclweb.org/anthology/D19-1324/" target="_blank">Neural Extractive Text Summarization with
+          Syntactic Compression</a> Xu and Durrett 2019
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/g5IA7TB53V0">
+          89 Abstractive Summarization</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N16-1012/" target="_blank">Abstractive Sentence Summarization with
+          Attentive Recurrent Neural Networks</a> Chopra et al. 2016<br></br>
+        <a href="https://www.aclweb.org/anthology/P17-1099/" target="_blank">Get To The Point: Summarization with
+          Pointer-Generator Networks</a> See et al. 2017
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/feLTtTilycY">
+          90 Pre-trained Summarization and Factuality</a></td>
+      <td><a href="https://www.aclweb.org/anthology/2020.acl-main.703/" target="_blank">BART: Denoising
+          Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension</a> Lewis et
+        al. 2019<br></br>
+        <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/1219-Paper.pdf" target="_blank">PEGASUS:
+          Pre-training with Extracted Gap-sentences for Abstractive Summarization</a> Zhang et al. 2020<br></br>
+        <a href="https://arxiv.org/pdf/2010.05478.pdf" target="_blank">Evaluating Factuality in Generation with
+          Dependency-level Entailment</a> Goyal and Durrett 2020
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/vAZ7VlLXReE">
+          91 Dialogue: Chatbots</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/4SYiMzWnm9c">
+          92 Neural Chatbots</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N15-1020.pdf" target="_blank">A Neural Network Approach to
+          Context-Sensitive Generation of Conversational Responses</a> Sordoni et al. 2015<br></br>
+        <a href="https://arxiv.org/pdf/1510.03055v2.pdf" target="_blank">A Diversity-Promoting Objective Function for
+          Neural Conversation Models</a> Li et al. 2016<br></br>
+        <a href="https://arxiv.org/pdf/1801.07243.pdf" target="_blank">Personalizing Dialogue Agents: I have a dog, do
+          you have pets too?</a> Zhang et al. 2018
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/JXfAkX7kvnM">
+          93 Task-Oriented Dialogue</a></td>
+      <td><a href="https://arxiv.org/pdf/1811.01241.pdf" target="_blank">Wizards of Wikipedia: Knowledge-Powered
+          Conversational Agents</a> Dinan et al. 2019</td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/SoOgcInWpNM">
+          94 Dialogue and QA</a></td>
+      <td><a href="https://arxiv.org/pdf/1808.07036.pdf" target="_blank">QuAC : Question Answering in Context</a> Choi
+        et al. 2018<br><br>
+        <a href="https://arxiv.org/pdf/1809.01494.pdf" target="_blank">Interpretation of Natural Language Rules in
+          Conversational Machine Reading</a> Saeidi et al. 2018
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/ettP9Ayrho8">
+          95 Morphology</a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/d3x0dfn85JE">
+          96 Morphological Analysis</a></td>
+      <td><a href="https://www.aclweb.org/anthology/N13-1138/" target="_blank">Supervised Learning of Complete
+          Morphological Paradigms</a> Durrett and DeNero 2013<br><br>
+        <a href="https://www.aclweb.org/anthology/D13-1174.pdf" target="_blank">Translating into Morphologically Rich
+          Languages with Synthetic Phrases</a> Chahuneau et al. 2013
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/rTSCLfxdxrI">
+          97 Cross-lingual Tagging and Parsing</a></td>
+      <td><a href="https://www.aclweb.org/anthology/P11-1061/" target="_blank">Unsupervised Part-of-Speech Tagging with
+          Bilingual Graph-Based Projections</a> Das and Petrov 2011<br><br>
+        <a href="https://www.aclweb.org/anthology/D11-1006/" target="_blank">Multi-Source Transfer of Delexicalized
+          Dependency Parsers</a> McDonald et al. 2011
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="https://youtu.be/KNBRb8sjzOA">
+          98 Cross-lingual Pre-training</a></td>
+      <td><a href="https://arxiv.org/pdf/1602.01925.pdf" target="_blank">Massively Multilingual Word Embeddings</a>
+        Ammar et al. 2016<br><br>
+        <a href="https://www.aclweb.org/anthology/Q19-1038.pdf" target="_blank">Massively Multilingual Sentence
+          Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond</a> Artetxe and Schwenk 2019<br><br>
+        <a href="https://www.aclweb.org/anthology/P19-1493.pdf" target="_blank">How multilingual is Multilingual
+          BERT?</a> Pires et al. 2019
+      </td>
+    </tr>
+
+    <tr bgcolor="#F2F2F2">
+      <td><a href="https://youtu.be/YIdDmFNF5zc">
+          99 Ethical Issues in NLP</a></td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+
+</p>
+</body>
+
+</html>

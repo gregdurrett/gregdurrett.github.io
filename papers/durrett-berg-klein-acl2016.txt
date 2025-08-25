@@ -1,0 +1,10 @@
+@InProceedings{DurrettBergKlein2016,
+  author    = {Durrett, Greg  and  Berg-Kirkpatrick, Taylor  and  Klein, Dan},
+  title     = {Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints},
+  booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month     = {August},
+  year      = {2016},
+  address   = {Berlin, Germany},
+  publisher = {Association for Computational Linguistics},
+}
+

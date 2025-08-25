@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Greg Durrett</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; style-src 'self' https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com 'unsafe-inline';">-->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' *.googleapis.com *.cloudflare.com *.bootstrapcdn.com; style-src 'self' *.googleapis.com *.bootstrapcdn.com *.cloudflare.com 'unsafe-inline'; script-src-elem 'self' *.googleapis.com *.cloudflare.com 'unsafe-inline';">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!--<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>-->
+    <style>
+      body {
+        font: normal 90% Cambria, Avenir Next, Times;
+      }
+      a:link {
+        color: #57068C; /* NYU purple */
+      }
+      a:visited {
+        color: #3C0464; /* Darker purple for visited links */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Greg Durrett</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Bio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#research">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#teaching">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#misc">Misc</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container my-5">
+   <!--<table border="0" >
+  - <tr>
+    <td><font size=5>Greg Durrett</font><br/><font size=3><a href="mailto:gdurrett@cs.utexas.edu">gdurrett@cs.utexas.edu</a></font><br/> <font size=3><a href="cv.pdf">CV</a></font></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=5>Assistant Professor</font><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=3>UT Austin, Department of Computer Science</font><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=3><a href="https://taur.cs.utexas.edu/">TAUR lab</a> / <a href="https://www.nlp.utexas.edu/">UT NLP</a></font></td>
+    <td>
+      <img id="picimg" src="./photo.png" class="img-thumbnail" align="right" style="height:250px;margin-left:10px;" alt="Photo of Greg"/>
+    </td>
+   </tr></table> -->
+   <!--<table border="0" ><tr>
+    <td><font size=5>Greg Durrett</font><br/><font size=3>Assistant Professor, UT Austin Computer Science</a><br/><font size=3><a href="mailto:gdurrett@cs.utexas.edu">gdurrett@cs.utexas.edu</a></font><br/> <font size=3><a href="cv.pdf">CV</a> / <a href="https://taur.cs.utexas.edu/">TAUR lab</a> / <a href="https://www.nlp.utexas.edu/">UT NLP</a></td>
+    <td>
+      <img id="picimg" src="./photo.png" class="img-thumbnail" align="right" style="height:250px;margin-left:10px;" alt="Photo of Greg"/>
+    </td>
+   </tr>
+   </table>-->
+      <img id="picimg" src="./photo.png" class="img-thumbnail" align="right" style="height:200px;margin-left:10px;" alt="Photo of Greg"/>
+      <font size=5>Greg Durrett</font><br/><font size=3>Associate Professor, New York University<br/>Computer Science Department (Courant Institute of Mathematical Sciences) and Center for Data Science (CDS)<br/><br/><font size=2><a href="mailto:gd2691@nyu.edu">gd2691@nyu.edu</a></font><br/><br/> <font size=3><a href="gdurrett-cv.pdf">CV</a> / <a href="https://taur.cs.utexas.edu/">TAUR lab</a></td>
+    </div>
+    <div id="research" class="container my-5">
+      <h2><a href="https://taur.cs.utexas.edu/">Research Group and Publications</a></h2>
+      <p>My students, collaborators, publications, and other information about my research group can be found on the <a href="https://taur.cs.utexas.edu/">TAUR lab website</a>.
+
+      <p><a href="https://scholar.google.com/citations?user=EpQ_sDEAAAAJ&hl=en">Google Scholar</a> / <a href="https://www.semanticscholar.org/author/Greg-Durrett/1814094">Semantic Scholar</a></p>
+
+      <p>My research is primarily in the field of Natural Language Processing (NLP) and machine learning. My group focuses on improving techniques for using large language models (LLMs) to reason about knowledge in text.
+      LLMs still fall short in challenging real-world applications such as medical information processing, scientific discovery, and legal reasoning.
+      We develop methods for training these models to have new capabilities, augmenting them to be more reliable, and assessing their outputs to identify strengths and weaknesses of
+      the state of the art. Some examples of recent projects include:
+      <ul>
+      <li>Specializing LLMs with insights from interpretability <a href="https://arxiv.org/pdf/2406.01563">(Yin et al., NeurIPS 2024)</a>
+      <li>Learning models to assess fine-grained factuality of generation systems <a href="https://arxiv.org/pdf/2404.10774.pdf">(Tang et al., EMNLP 2024)</a>
+      <li>Augmenting LLMs with new capabilities like SMT solvers to improve their reasoning <a href="https://arxiv.org/pdf/2305.09656.pdf">(Ye et al., NeurIPS 2023)</a>
+      <li>Assessing strengths and weaknesses of chain-of-thought <a href="https://arxiv.org/abs/2409.12183">(Sprague et al., ICLR 2025)</a> and post-training <a href="https://arxiv.org/pdf/2310.03716.pdf">(Singhal et al., COLM 2024)</a>
+      <li>Training an "Astro Copilot" model to assist astronomy researchers with coding tasks, as part of the <a href="https://www.cosmicai.org/">NSF-Simons AI Institute for Cosmic Origins</a> (ongoing work)
+      </ul>
+    </div>
+    <div id="teaching" class="container my-5">
+      <h2>Teaching</h2>
+
+<p><a href="https://www.cs.utexas.edu/~gdurrett/courses/nlp-module/"><b>NLP Module for high schools</b></a>: videos and hands-on assignments introducing n-gram language
+models and pre-trained Transformers.
+
+      <h3>Courses at NYU</h3>
+
+      <p>Coming soon!
+
+      <h3>Courses at UT Austin</h3>
+
+<p><a href="https://www.cs.utexas.edu/~gdurrett/courses/online-course/materials.html"><b>CS388: Natural Language Process (Online MSCS/MSDS version)</b></a>: video lectures, readings,
+and assignments for the online masters offering of these NLP courses.
+
+<p><b>Undergraduate and graduate teaching:</b>
+<ul>
+<li><b>Fall 2024:</b> <a class="syslink" href="./courses/fa2024/cs371n.shtml">CS371N: Natural Language Processing (undergraduate)</a>
+<li><b>Spring 2024:</b> <a class="syslink" href="./courses/sp2024/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li><b>Older:</b> <a class="syslink" href="./courses/fa2023/cs371n.shtml">CS371N Fall '23</a>; <a class="syslink" href="./courses/sp2023/cs388.shtml">CS388 Spring '23</a>; <a class="syslink" href="./courses/fa2022/cs378.shtml">CS378 Fall '22</a>; <a class="syslink" href="./courses/fa2021/cs378.shtml">CS378 Fall '21</a>; <a class="syslink" href="./courses/sp2021/cs388.shtml">CS388 Fall '21</a>; <a class="syslink" href="./courses/fa2020/cs378.shtml">CS378 Fall '20</a>;
+  <a class="syslink" href="./courses/sp2020/cs378.shtml">CS378 Spring '20</a>;
+<a class="syslink" href="./courses/fa2019/cs388.shtml">CS388 Fall '19</a>;
+ <a class="syslink" href="./courses/sp2019/cs378.shtml">CS378 Spring '19</a>;
+<a class="syslink" href="./courses/fa2018/cs388.shtml">CS388 Fall '18</a>;
+ <a class="syslink" href="./courses/fa2017/cs395t.shtml">CS395T (Structured Models for NLP) Fall '17</a>
+</li>
+</ul>
+
+<p>Read about some of the course materials we use in our TeachingNLP workshop paper:<br/><br/>
+<a class="publink" href="http://taur.cs.utexas.edu/papers/durrett-etal-2021-teaching.pdf">Contemporary NLP Modeling in Six Comprehensive Programming Assignments</a><br/>
+Greg Durrett, Jifan Chen, Shrey Desai, Tanya Goyal, Lucas Kabela, Yasumasa Onoe, Jiacheng Xu. <i>Proceedings of the Fifth Workshop on Teaching NLP.</i>
+
+    </div>
+    <div id="misc" class="container my-5">
+      <h2>Miscellaneous</h2>
+      <p>You can find videos of courses, talks, and more on <a href="https://www.youtube.com/@gregdurrett459/videos">my YouTube channel</a>. Some of these <a href="https://www.youtube.com/watch?v=DcB6ZPReeuU">[are]</a>
+<a href="https://www.youtube.com/watch?v=DB9KN3FGJIY">[silly]</a> <a href="https://www.youtube.com/watch?v=QqgrBAFWhSM">[videos]</a>.
+      <p>When I'm not working, I'm often struggling with various physical pursuits (running, cycling, climbing, and hiking). My half marathon PR is 1:55:26 (set 2/19/2023).
+    </div>
+  </body>
+</html>

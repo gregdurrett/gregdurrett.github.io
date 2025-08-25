@@ -1,0 +1,10 @@
+@InProceedings{DurrettKlein2015,
+  author    = {Durrett, Greg  and  Klein, Dan},
+  title     = {Neural CRF Parsing},
+  booktitle = {Proceedings of the Association for Computational Linguistics},
+  month     = {July},
+  year      = {2015},
+  address   = {Beijing, China},
+  publisher = {Association for Computational Linguistics},
+}
+

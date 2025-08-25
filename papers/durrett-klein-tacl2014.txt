@@ -1,0 +1,7 @@
+@InProceedings{DurrettKlein2014,
+  author    = {Durrett, Greg  and  Klein, Dan},
+  title     = {A Joint Model for Entity Analysis: Coreference, Typing, and Linking},
+  booktitle = {Transactions of the Association for Computational Linguistics},
+  year      = {2014},
+}
+

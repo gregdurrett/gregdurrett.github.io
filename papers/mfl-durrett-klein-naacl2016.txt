@@ -1,0 +1,10 @@
+@InProceedings{FrancisLandauDurrettKlein2016,
+  author    = {Francis-Landau, Matthew and Durrett, Greg  and  Klein, Dan},
+  title     = {Capturing Semantic Similarity for Entity Linking with Convolutional Neural Networks},
+  booktitle = {Proceedings of the North American Association for Computational Linguistics},
+  month     = {June},
+  year      = {2016},
+  address   = {San Diego, California, USA},
+  publisher = {Association for Computational Linguistics},
+}
+

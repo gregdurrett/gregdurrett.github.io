@@ -1,0 +1,177 @@
+<html>
+<head>
+  <title>CS388 Syllabus</title>
+  <link rel="stylesheet" type="text/css" href="courses.css"/>
+</head>
+
+<body>
+
+<h1>Syllabus for CS388: Natural Language Processing</h1>
+
+<p>Instructor: <a href="http://cs.utexas.edu/~gdurrett">Greg Durrett</a>, <a href="mailto:gdurrett@cs.utexas.edu">gdurrett@cs.utexas.edu</a>
+<br/>Lecture: Tuesday and Thursday 12:30pm - 2:00pm, GDC 4.302
+<br/>TA: Anisha Gunjal
+<br/>Office Hours: see main course webpage
+
+<h2>Description</h2>
+
+<p> Natural language processing (NLP) is a subfield of AI focused on solving problems that involve dealing with human language in a sophisticated way: these include information extraction, machine translation, automatic summarization, conversational dialogue, syntactic analysis, and many others. Much of the progress on these problems over the last 25 years has been driven by statistical machine learning and, more recently, deep learning. One distinctive feature of language compared to other types of data is its structured nature: modeling language involves understanding the linguistic phenomena it exhibits and grappling with it as a sequentially-structured, tree-structured, or graph-structured entity.
+
+<p>This class is intended to be a survey of modern NLP in two respects. First, it covers the main applications of NLP techniques today, both in academia and in industry, as well as enough linguistics to put these problems in context and understand their challenges. Second, it covers a range of models in structured prediction and deep learning, including classifiers, neural network encoders, encoder-decoder models, pre-trained language models, statistical parsers, and more. We study the models themselves, examples of problems they are applied to, inference methods, parameter estimation (primarily supervised and semi-supervised / pre-trained), and optimization. Programming assignments involve building scalable machine learning systems for various NLP tasks and seeing how these models can be put into practice.
+
+<p><b>Prerequisites</b>
+<ul>
+<li>391L - Machine Learning, 343 - Artificial Intelligence, or equivalent AI/ML course experience</li>
+<li>Familiarity with Python for programming assignments</li>
+<li>Additional prior exposure to probability, linear algebra, optimization, linguistics, and NLP useful but not required</li>
+</ul>
+
+<h2>Lectures</h2>
+
+<p>Lectures are 12:30-2:00pm Tuesday and Thursday in-person in GDC 4.302. A complete schedule of lectures and assignments, complete with readings, is on the main website page.
+
+<p>There is no required textbook for this course. Readings from book chapters and papers will be posted on the course website.
+
+<p><b>Recordings of each lecture will be made available after the class. However, the class WILL NOT be streamed on Zoom.</b> This compromise is designed to encourage attendance and in-class participation while making it feasible for students to make up missed classes or watch later if they cannot attend. Class recordings are reserved only for students in this class for educational purposes and are protected under FERPA. The recordings should not be shared outside the class in any form. Violation of this restriction by a student could lead to Student Misconduct proceedings.
+
+<p><b>COVID:</b> When attending in person, students are <b>strongly encouraged</b> to wear masks and be vaccinated against COVID. If you become sick with COVID or any other ailment and are unable to attend class, <b>please contact the instructor if you need accommodation</b> and we will work to support you.
+
+<p><b>Office Hours:</b> Office hours will be held in a mix of in-person and on Zoom, per the discretion of the course staff. Information will be posted on the main course page at the start of the semester.
+
+<p><b>Discussions:</b> Our discussion board is linked from the main course page.
+
+<h2>Assignments</h2>
+
+<p>The timeline of assignments is on the course calendar. Assignment specifications, code, and data will be made available on the course website. Grading breakdowns are as follows:
+
+<ul>
+<li>Project 1: 10%</li>
+<li>Project 2: 15%</li>
+<li>Project 3: 20%</li>
+<li>Final project: 55%</li>
+</ul>
+
+<p>Assignments will be submitted on Gradescope. Each assignment PDF will have more detailed instructions about what to submit; typically the submissions will consist of autograded code (e.g., measuring dev set accuracy of your model) and a brief written report.
+
+<p>Each student is given 5 slip days to use throughout the term. Any number of these days can be applied to Projects 1 through 3 (<b>not the final project</b>) to extend the deadline for that assignment. E.g., you can turn the first project in 2 days late and the second project 3 days late. Slip days must be applied as entire days: submitting 25 hours late incurs 2 slip days. After your slip days are exhausted, each day of lateness will incur a 5% <b>absolute</b> penalty to that assignment's grade. If you would've received 90/100 on an assignment, you would then receive 75/100 if turned in 3 days late. Plan your slip day budget accordingly: you may want to save them up if you know you'll be traveling for a conference around a due date for a later project. Additional extensions may be granted in cases of medical or other emergencies, but must be agreed on with the course staff <b>before the project's original due date</b>.
+
+<p><b>Religious Holy Days: </b> A student who is absent from an examination or cannot meet an assignment deadline due to the observance of a religious holy day may take the exam on an alternate day or submit the assignment up to 24 hours late without penalty, if proper notice of the planned absence has been given. Notice must be given at least 14 days prior to the classes which will be missed. For religious holy days that fall within the first 2 weeks of the semester, notice should be given on the first day of the semester. Notice should be personally delivered to the instructor and signed and dated by the instructor, or emailed, in which case a student submitting email notification must receive email confirmation from the instructor.
+
+<p><b>Illness and Medical Extensions: </b> Extensions may be granted in cases of illness (including COVID-19), medical emergency, or other circumstances. In all cases, the student should inform the course staff as soon as is practical, and the extension must be negotiated <i>before the assignment's original due date</i>. 
+
+<h3>Projects</h3>
+
+<p>The projects are more substantial programming assignments. Each project centers around an NLP task on a standard dataset, with part of the project being an open-ended extension where you'll have options for exactly what you want to implement or explore further.
+
+<p><b>Grading: </b> Projects are graded 0-100. Typically the bulk of the grade is determined by completing the required coding task. The remainder of the grade is based on a writeup that describes what you did and how well it worked. Your report should be written in the tone and style of an ACL/NeurIPS conference paper. Any format with reasonably small (1" margins) is fine, including the <a href="http://acl2017.org/calls/papers/">ACL style files</a> or any one- or two-column format with similar density.
+
+<h3>Final Project</h3>
+
+<p>The final project is an opportunity for open-ended exploration of concepts in the course. This project should constitute novel work beyond directly implementing concepts from lecture and should result in a report that roughly reads like an NLP/ML conference submission in terms of presentation and scope. <b>You may work on the final project either individually or in groups of two</b>; however, groups of two are preferred from the standpoint of enabling more substantial projects. You are allowed to integrate the project with ongoing research or projects from other classes (assuming the other instructor also approves).
+
+<p><b>Proposal: </b> Partway through the semester, you will submit a brief proposal (around 1 page) explaining your idea, which the course staff will provide feedback on.
+
+<p><b>Writeup: </b> Your final project report should be 4-8 pages. Use your discretion about the length. Groups of two should have reports closer to 8 pages. The scope should be similar to that of an ACL paper: you should present a novel idea, discuss related work, describe your implementation or what you did, give results, and provide discussion or error analysis.
+
+<p><b>Presentation: </b> You will give lightning talks (around 3 minutes) about your project on the last two class days.
+
+<h2>Final Grades</h2>
+
+<p>Your final grade is computed based on the total points earned across all assignments. The final grade is mapped to a letter as follows, with grades on the boundary receiving the higher grade:
+<br><br>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber5">
+  <tr>
+    <td><b>A</b></td>
+    <td><b>100 - 93.3</b></td>
+  </tr>
+  <tr>
+    <td><b>A-</b></td>
+    <td><b>93.3 - 90.0</b></td>
+  </tr>
+  <tr>
+    <td><b>B+</b></td>
+    <td><b>90.0 - 86.6</b></td>
+  </tr>
+  <tr>
+    <td><b>B</b></td>
+    <td><b>86.6 - 83.3</b></td>
+  </tr>
+  <tr>
+    <td><b>B-</b></td>
+    <td><b>83.3 - 80.0</b></td>
+  </tr>
+  <tr>
+    <td><b>C+</b></td>
+    <td><b>80.0 - 76.6</b></td>
+  </tr>
+  <tr>
+    <td><b>C</b></td>
+    <td><b>76.6 - 73.3</b></td>
+  </tr>
+  <tr>
+    <td><b>C-</b></td>
+    <td><b>73.3 - 70.0</b></td>
+  </tr>
+  <tr>
+    <td><b>D</b></td>
+    <td><b>70 - 65</b></td>
+  </tr>
+  <tr>
+    <td><b>F</b></td>
+    <td><b>below 65</b></td>
+  </tr>
+
+</table>
+
+<h2>Academic Honesty: Collaboration and ChatGPT</h2>
+
+<p>Please read the department's <a href="https://www.cs.utexas.edu/academics/conduct">academic honesty</a> policies. For this course, <b>students are encouraged to discuss lecture material,
+homework problems, and coding assignments with others!</b> However, <b>your final written solution or source code must be your own</b>, excluding the final project, which may be completed in groups.
+
+Finally, note that you may consult external resources such as blog posts, YouTube videos, academic papers, GitHub repositories, AI assistants, and more. However, your use of such resources,
+particularly GitHub repositories, must be limited in the same way as discussions with other students: you can look at these to get an idea of how to solve a problem, but you should not take
+external code and submit it as part of your assignment, <b>except for the final project when it is appropriately attributed.</b>
+
+<p>Be sure you respect these policies when posting on the discussion board. Asking clarifying questions, addressing possible bugs in the provided code, etc. are fair game,
+but you should not discuss solutions in a substantive way that might spoil them for others. When in doubt, and when posting large amounts of source code, post privately to the instructors. 
+
+<p>Students who violate these policies may receive a failing grade on the assignment in question or for the course overall, depending on the instructors' judgment and the severity of the infraction.
+
+<p>You are free to discuss the homework assignments with other students and work towards solutions together. However, <b>all of the code you write must be your own!</b> We will be using Moss and any copied code will be treated as a violation of <a href="https://www.cs.utexas.edu/academics/conduct">academic honesty</a> and may result in a failing grade. In addition, your writeup must be entirely your own and your extension cannot duplicate those of your collaborators'.
+
+<p><b>Policy on GitHub Copilot</b>: You are allowed to use GitHub Copilot for the assignments. However, <b>you must disclose this usage in two places.</b> First, in your writeup, clearly state how you used GitHub Copilot. Second, in your code, indicate using a comment any blocks of code of more than 2 lines that were included from GitHub Copilot.
+
+<p><b>Policy on ChatGPT: </b> Understanding the capabilities of these systems and their boundaries is a major focus of this class, and there's no better way to do that than by using them!
+
+<p><b>We encourage you to use ChatGPT to understand concepts in AI and machine learning</b>. You should see it as a another tool like web search that can supplement understanding of the course material.
+
+<p><b>You are allowed to use ChatGPT for preparing your writeups.</b>. However, usage of ChatGPT must be limited in the same way as usage of other resources like websites or other students. You should write your report yourself and only use ChatGPT as a mild writing assistant. Furthermore, <b>you must disclose your usage of ChatGPT in an Acknowledgments section</b>, describing what it was used for and which sections of the report it was used to produce.
+
+Failing to adequately disclose ChatGPT usage will be considered academic dishonesty. Furthermore, including text that fails to follow standards of scientific writing (i.e., the vague and flowery text that ChatGPT produces) will be subject to point deductions on the writeup.
+
+<h2>Compute Resources</h2>
+
+<p>The assignments are designed to be doable on personal computers (assuming you write your code efficiently!). However, for extensions and for your final project, you may wish to run longer experiments.
+
+<p>Google Cloud Platform / Google Colab are two of the resources students use most frequently. Colab Pro is a paid upgrade starting at $9.99/mo that can give you sufficient resources to train small models. We will discuss project feasibility later; you will have to scope your project such that it can be done with the resources available to you, and there are plenty of great data-oriented project ideas that do not involve massive compute budgets.
+
+<p>The department's Condor pool is another resource you have access to. An overview of Condor can be found <a href="http://www.cs.utexas.edu/facilities/documentation/condor">here</a> and some documentation can be found <a href="https://www.cs.utexas.edu/~ml/faq/mastodon_readme.html">here</a>.
+
+<p>Be aware that your jobs may be terminated by Condor if they are competing for resources and plan ahead for this if you choose to use Condor.
+
+<p>Ask the instructor about the availability of a TACC allocation.
+
+<p>Unfortunately, we are not able to offer credits for large language model (LLM) services like OpenAI, Cohere, etc. at this time.
+
+<h2>Miscellaneous</h2>
+
+<p><b>Disabilities: </b> The university is committed to creating an accessible and inclusive learning environment consistent with university policy and federal and state law. Students with disabilities may request appropriate academic accommodations from the <a href="http://ddce.utexas.edu/disability/">Division of Diversity and Community Engagement, Services for Students with Disabilities</a> at 512-471-6259. If you are already registered with SSD, please deliver your Accommodation Letter to me as early as possible in the semester so we can discuss your approved accommodations and needs in this course.
+
+<p><b>Diversity: </b> It is our intent that students from all diverse backgrounds and perspectives be well served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that students bring to this class be viewed as a resource, strength and benefit. It is our intent to present materials and activities that are respectful of diversity: gender, sexuality, disability, age, socioeconomic status, ethnicity, race, and culture. Your suggestions are encouraged and appreciated. Please let the course staff know  of ways to improve the effectiveness of the course for you personally or for other students.
+
+<p>Furthermore, at times throughout the semester, we will discuss the broader cultural impact of machine learning, NLP, and language technology. I ask that students approach these topics seriously and recognize the power technology has to both support and undermine efforts to create a more inclusive society.
+
+</body>
+
+</html>
+

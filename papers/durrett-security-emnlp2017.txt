@@ -1,0 +1,10 @@
+@InProceedings{DurrettEtAl2017,
+  author    = {Durrett, Greg  and Kummerfeld, Jonathan K. and Berg-Kirkpatrick, Taylor  and  Portnoff, Rebecca S. and Afroz, Sadia and McCoy, Damon and Levchenko, Kirill and Paxson, Vern},
+  title     = {Identifying Products in Online Cybercrime Marketplaces: A Dataset for Fine-grained Domain Adaptation},
+  booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  month     = {September},
+  year      = {2017},
+  address   = {Copenhagen, Denmkar},
+  publisher = {Association for Computational Linguistics},
+}
+

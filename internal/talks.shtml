@@ -1,0 +1,109 @@
+<html>
+<head>
+  <title>Talks</title>
+  <link rel="stylesheet" type="text/css" href="../courses/fa2018/courses.css"/>
+</head>
+
+<body>
+
+<h1>Talks</h1>
+
+<p>The purpose of a talk is threefold:
+
+<ol>
+<li> Convey a core idea of your work so that someone comes away having learned something
+<li> Excite someone to read your paper
+<li> Convince people that you're smart
+</ol>
+
+<p><b>The most important thing is to decide on a simple, clear "talk message" to convey.</b> This may be different and simpler than the message of the paper. Papers can be nuanced
+and are written for people in the area. Talks are typically aimed at the broader NLP community and will gloss over things like similarity to prior work in ways that would get a paper rejected.
+
+<h2>Introduction</h2>
+
+<p>This is <b>the most important</b> part of the talk, and the one we will spend the most time getting right.
+
+<p>You typically want a flow of something like this: "Current work does X; here's an example of what that looks like. But this suffers from Y problem;
+here's an example of that. What we do in this paper is Z, which has benefits A, B, and C, as illustrated by this example. I'll discuss this in the rest of the paper."
+Then go to an outline slide.
+
+<p>Within the first 5 minutes (regardless of talk length), you want to convey:
+<ol>
+<li> The problem that you're working on (with examples! Starting with an example is almost always the right thing to do.)
+<li> The core insight of your approach
+<li> Why this approach is a good idea
+</ol>
+
+<p>But an intro <b>should not</b> do any of the following:
+<ol>
+<li> Do not attempt to give a thorough taxonomy of related work. Don't even mention more than 3-4 papers. Your focus should be on conveying what you did, not what others did!
+<li> Do not discuss problems other than the one you're working on. If you start talking about X, audience members expect to see results on X.
+<li> Do not recap every point in the paper's introduction.
+</ol>
+
+<p>Don't go more than 6-7 minutes before the outline. It gets really hard to follow a longer introduction without knowing where things are going.
+
+<h2>Outline</h2>
+
+<p>If your talk is more than 5 minutes, you need some sort of structure that people can anchor to. I don't like formal outlines with tons of bullets. Outlines are good if they convey the structure of what you're going to discuss, help anchor that to examples the listener has seen, and use consistent visual imagery with the rest of the talk. Here are two good examples courtesy of Tanya and Xi:
+
+<p>
+<img src="figs/outline-1.png" alt="Outline 1" height="200">
+<img src="figs/outline-2.png" alt="Outline 2" height="200">
+
+<p>Both of them reference examples that have been developed throughout the paper and show the flow of a complex system, making it clear what the inputs and outputs of each module are while avoiding complicated-looking block diagrams and things like that. Then the rest of the talk can be structured as a tour of this figure, "zooming out" to the full figure between subsections as appropriate.
+
+<p>If your paper is more analytical or empirical, you might need to structure it instead around hypotheses or research questions to investigate. But do appeal to examples, use consistent imagery with the rest of the paper, and make it clear and specific.
+
+<h2>Content</h2>
+
+<p>Once the first 5 minutes of a talk are good, the rest can fall into place. Here's some general advice:
+
+<ul>
+<li> <b>Use consistent visual metaphors.</b> Try to keep layouts and diagrams consistent: e.g., document on left, summary on right.
+In the examples of outlines above, the colors and fonts recur with those same elements throughout the paper. If you show people the same example
+and the same picture for 15 minutes straight, they might remember it! If you show them different visualizations, they may remember nothing.
+</ul>
+
+<h2>Results</h2>
+
+
+<ul>
+<li> <b>Don't include every point or result.</b> It takes more than 15 minutes to read and understand a paper. It also takes more than 15 minutes to fully explain a paper.
+So think about what technical details can be abstracted away and what results are most important to convey the core "talk message."
+<li> <b>Make only one point per slide (or one point per chart).</b> If you have 5 systems you're comparing in the paper, you may want to focus on a comparison
+of 3 of them. Don't just list the systems, use callouts to explain the conclusions from each comparison.
+<li> <b>Color-code charts to be consistent with the paper.</b>
+</ul>
+
+<p>
+<img src="figs/results-1.png" alt="Outline 1" height="200">
+<img src="figs/results-2.png" alt="Outline 2" height="200">
+
+<p>The example on the left (from my job talk) is a nice "cartoony" way of presenting results: we would never put this in a paper, but it lets me talk through the tradeoffs
+in these approaches and is accessible to experts and non-experts. The example on the right, from Shrey, has to be built in (there's too much going on to just put it up at once,
+so this must show up in pieces), but illustrates the two different settings and lets him make the key point comparing WikiHow-trained models and CNN-trained models.
+
+<h2>Structures of different talks</h2>
+
+<p>Here's some general advice about different talk formats.
+
+<p><b>7-15 minute talks (conference talks): </b>20-30% of the talk should be intro. Then probably 50/50 between methods and results for the rest of it. Usually having the outline slide
+show up two or three times is good (so the talk is split into three or four broad sections). This format is very short, so really think hard about how to distill the "talk message"
+and convey it most effectively.
+
+<p><b>25-35 minute talks (RPE): </b> Here you've got more time. However, you should not just default to adding everything in the original paper that you couldn't fit in the conference version.
+Instead, think again about what the talk
+message should be and how to best support that. For RPEs specifically, you also need to include some background information. So starting with a 15-minute talk, slowing it down by 5 minutes, and
+adding 5 minutes of background is closer to a good result than starting with a 15-minute talk and adding another 15-minute talk to it.
+
+<p><b>45-60 minute talks (thesis proposal / defense, job talk, invited talk): </b> In this format, the overall message, introduction, and scaffolding is even more important. You still need to get to your
+main point in about 5 minutes of intro, but you can take more time to expand on it once you get there before you hit the outline. You will want an outline
+that covers 2-4 pieces of work. Typically you go into one project in detail (15 minutes or so), then discuss others at a higher level (5-10 minutes). <b>Even though this is 45 minutes, you still
+only get to communicate one idea!</b> So you <b>cannot</b> staple multiple talks together; it has to be created organically around this idea. You can reuse slides and visuals from existing talks,
+but everything needs to be recontextualized.
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!--#include FILE="header.html" -->
+
+<h2><b><a href="http://taur.cs.utexas.edu/people.shtml">TAUR Lab website featuring group members!</a></b></h2>
+
+<h3>Research</h3>
+
+<p>Our research revolves around developing new methods for natural language processing.
+Neural networks and pre-trained language models like GPT-3 have enabled great progress in
+in this field, but while these systems achieve high scores on
+benchmark datasets for tasks like question answering, they still do not work
+well in real-world settings. When users have very complex questions to answer
+(<i>did the recent tax cuts help the economy?</i>), they still rely on
+traditional information retrieval to find information and then synthesize it
+themselves.
+
+<p>To make progress on directions like this, we need models that can (a) reason
+about several pieces of information, (b) integrate commonsense background knowledge,
+(c) prioritize information, and (d) render the conclusion to a user in an effective
+way. These goals require advances in textual reasoning, question answering,
+and summarization. All of these tools need to be robust, controllable, and interpretable
+so they can be used as building blocks in real-world systems.
+
+
+<!--
+<p><b>Combining deep learning and discrete structures:</b> Deep neural networks
+have recently proven effective at sequence transduction problems, but they are
+even more powerful when they incorporate discrete mechanisms like attention
+(soft alignment to the input data). There are good opportunities to use even
+more explicit structure.  For generating longer texts like summaries, discrete
+variables tracking entity references can help capture pragmatic phenomena, and
+coverage models that explicitly track what aspects of the input have already
+been discussed can also impose a useful discourse structure. Giving a model the
+right inductive biases in the form of these structures would let us learn
+better models from smaller amounts of data.
+-->
+
+
+<p><b>Textual Reasoning and Question Answering:</b> We have explored several approaches for breaking down reasoning
+in terms of a set of natural language steps, which we call natural language deduction. 
+We showed that it is possible to use pre-trained transformer models to place a distribution over valid and useful deductive inferences given one or more premise statements
+(<a href="https://arxiv.org/pdf/2104.08825">Bostrom, Zhao, Chaudhuri, Durrett, EMNLP21</a>).
+We then showed how these single steps of deduction can be combined into a multi-step system (<a href="https://arxiv.org/pdf/2201.06028.pdf">Bostrom, Sprague, Chaudhuri, Durrett, arxiv22</a>).
+Our recent work shows that large language models such as GPT-3 cannot easily emulate these capabilities even if they are prompted to provide explanations of
+conclusions they draw (<a href="https://arxiv.org/pdf/2205.03401.pdf">Ye and Durrett, arxiv22</a>).
+
+<p>We are currently exploring applications of multi-step reasoning to areas such as fact-checking (<a href="https://arxiv.org/pdf/2205.06938.pdf">Chen, Sriram, Choi, Durrett, arxiv22</a>) jointly
+with <a href="https://sites.google.com/view/ut-misinformation-ai/">an interdisciplinary team at UT tackling misinformation and disinformation</a>.
+
+<p><b>Summarization and Generation:</b> To achieve our goals, we need models that can render information effectively to users.
+However, while the outputs of models like GPT-3 are impressive and often look correct at first glance, they exhibit problems upon deeper inspection.
+In a recent line of work (<a href="https://arxiv.org/pdf/2010.05478.pdf">Goyal
+and Durrett, EMNLP-F20</a>; <a
+href="https://arxiv.org/pdf/2104.04302.pdf">Goyal and Durrett, NAACL21</a>; <a
+href="https://arxiv.org/pdf/2205.12854.pdf">Tang et al., arXiv22</a>), we have
+proposed a method to detect factual errors in generated text called dependency arc
+entailment (DAE), which assesses factuality of semantic relationships between
+pairs of words with respect to an input. We show that this has advantages over
+other competing approaches based on question generation and question answering.
+Another type of error that arises particularly in long document summarization is narrative coherence:
+the generated summary jumps around and is difficult to follow.
+We have released an annotated set of summaries on top of state-of-the-art model outputs
+to pave the way for evaluating this aspect in future generation models
+(<a href="https://arxiv.org/pdf/2205.09641.pdf">Goyal, Li, Durrett; arxiv22</a>).
+
+<p>In a separate thread of work, we have focused on how to make systems that are controllable and can be tailored to individual users.
+For many tasks where there is not one ground truth output, such as summarization, outputting several options can be helpful to give a user a "menu" of choices,
+and such options can be reranked automatically once we learn a user preference function.
+We proposed a new algorithm for constructing massive lattices of generation options (<a href="https://arxiv.org/pdf/2112.07660.pdf">Xu et al., NAACL22</a>).
+This leverages the idea of hypothesis recombination along with a restructuring of the search procedure to yield large numbers of high-quality outputs. 
+
+<p><b>Entity Commonsense:</b> Can pre-trained models make commonsense inferences about entities (e.g., "<a href="https://en.wikipedia.org/wiki/Nathan_Chen">Nathan Chen</a> can teach someone how to figure skate")? We have
+two recent datasets (<a href="https://arxiv.org/pdf/2109.01653.pdf">Onoe, Zhang, Choi, Durrett, NeurIPS-Datasets21</a>; <a href="https://arxiv.org/pdf/2205.02832.pdf">Onoe, Zhang, Choi, Durrett, NAACL-F22</a>)
+evaluating these capabilities and are working to understand how entity representations are maintained in models and how we can update them.
+
+<p><b>Using Explanations:</b> What can post-hoc interpretation methods tell us about how NLP models are behaving? We can use them to make claims about counterfactuals (<a href="https://arxiv.org/pdf/2104.04515.pdf">Ye, Nair, Durrett, EMNLP21</a>) or
+calibrate models (<a href="https://arxiv.org/pdf/2110.07586.pdf">Ye and Durrett, ACL22</a>) by using them to analyze the reasoning processes that a model is using for tasks like
+QA and textual entailment.
+
+<!--#include FILE="footer.html" -->

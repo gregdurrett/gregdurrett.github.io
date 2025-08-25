@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title>Style Guide</title>
+  <link rel="stylesheet" type="text/css" href="../courses/fa2018/courses.css"/>
+</head>
+
+<body>
+
+<h1>Style Guide</h1>
+
+
+<p><b>Greg's Macros:</b> Please include the following in the preamble:<br>
+<code>
+\usepackage[textsize=scriptsize]{todonotes}<br>
+\setlength{\marginparwidth}{3cm} % for todo notes<br/>
+\usepackage{inconsolata}<br/>
+\newcommand\gd[1]{\todo[color=red!40]{{\bf Greg}: #1}}<br/>
+\newcommand{\greg}[1]{\textcolor{red}{\textbf{GREG:} #1}}
+</code>
+
+<p>If it works, include:<br>
+<code>
+\usepackage[a-1b]{pdfx}<br>
+</code>
+as this is required for PDFs to be able to uploaded to the NSF for annual reports. However, if it breaks your paper, just delete it.
+
+<p><b>Pre-submission checklist</b>
+<ul>
+<li><strike><b>Supplementary material should be a separate PDF.</b> The main PDF should only be the core content and references. If you want to have it in one overleaf and manually separate the PDFs,
+that's okay, but be very careful that you don't screw this up.</strike> Not true anymore for most venues, but maybe double-check...
+<li>Follow the Bender Rule: explicitly state the language of the datasets you use.
+<li>Reproducibility: do you want to upload code with your submission? If it's practical and can be easily anonymized, this is good to do,
+but it's not crucial.
+<li><b>Address the reproducibility checklist</b>
+<li><b>If it's a dataset, produce a datasheet</b>
+<li><b>Include examples of your model's outputs!</b> (appendix is okay). Particularly if it's a generation paper.
+<li>References: make sure there aren't obvious capitalization errors and arXiv citations were truly only published in arXiv.
+<li>Print the PDF in black-and-white and make sure it doesn't look horrible
+</ul>
+
+<p><b>General style</b>
+<ul>
+<li>``'' for quotes, not " "
+<li>\paragraph{title} makes paragraphs with bold titles
+<li>Footnotes appear *after* trailing punctuation, e.g., "I did stuff.\footnote{Here's the FN}"
+<li>Introduce mathematical notation even if your paper isn't math-y. Being able to refer to a data instance as a (question, context, answer) $(q,c,a)$ triple and saying that the model
+places a distribution $p(a | c, q)$ actually clarifies things a lot for the reader even if you think this is obvious.
+<li>Do not introduce notation which is never used! E.g., for a sentence, do you ever actually need to refer to that sentence again or do you just say "we embed sentence s into vectors x"? If the latter, just introduce notation for x and not s.
+<li>Figures must have informative captions. Do not say "Figure 1: Model structure in three parts." say "Figure 1: Model structure in three parts. First we encode X (blue), then encode Y (green), then combine these to decode Z (red). ...etc."
+<li>When using \texttt{}, include \small inside it. This usually looks a bit better (it's what the ACL style guide itself does)
+</ul>
+
+<p><b>Figures</b>
+<ul>
+<li>If symbols are defined in the text, label them in the figure (and vice versa)
+<li>Fonts are all Times. For source code, consider using Consolas. Helvetica Neue or Calibri are reasonable choices for "annotations" in figures (organizational text, headings, etc.) if you want them in a different font.
+<li>Fonts are generally similar-sized as the text (+/-50% at most)
+<li>Color saturations of similar elements are matched UNLESS you need to make them different so it appears different in black and white
+<li>Don't change Line Spacing to 0.9 for text, usually it looks quite bad!
+<li>More principles here: <a href="./cns-fig-guide.pdf">CNS figure guide</a>
+</ul>
+
+<p><b>Tables</b>
+<ul>
+<li>Use the booktabs package. \toprule at the top of the table, \midrule to define big section boundaries, \bottomrule at the bottom. Try to minimize the number of lines.
+<li>Use vertical lines sparingly; there should likely be 1-2 per table. Don't include them at the left and right edges of the table, nor between every pair of numbers.
+<li>All numbers should have the same number of decimal places. So rather than "0% 22.2% 100%", you should "0.0% 22.2% 100.0%"
+<li>If you have different numbers of digits before the decimal point, pad with \phantom{0}.
+</ul>
+
+<p><b>Results:</b> Run bootstrap significance tests on key results. Do not say "significant" unless you mean "statistically significant." Use the word "substantial" or "large" instead, or something like that. Guide to paired bootstrap testing on slides 5 and 6: <a href="https://people.cs.umass.edu/~brenocon/inlp2015/16-sigtests.pdf">https://people.cs.umass.edu/~brenocon/inlp2015/16-sigtests.pdf</a>. Also consult <a href="https://github.com/rtmdrr/testSignificanceNLP/blob/master/testSignificance.py">Rotem Dror's repo</a> or <a href="https://github.com/desmond-ong/doBootstrap">Desmond Ong's repo</a>
+
+<p><b>Camera-ready:</b> Acknowledgments is spelled like that, no e after the g.
+
+<p><b>References</b>
+<ul>
+<li>\cite{} or \citep{} when the citation is not part of the sentence (parenthetical at the end), \citet{} or \newcite{} when it plays a role in the grammatical structure.
+<li>When citing several papers in a row, tend to prefer chronological order unless there's a good reason to deviate. E.g., past work has studied X (Foo 2001, Bar 2007, Baz 2009), not (Bar 2007, Foo 2001, Baz 2009)
+<li><a href="http://aclweb.org/anthology">The ACL Anthology</a> is a good source of refs, as is ACM DL for other things. <b>You should use the standard ACL Anthology references for anything published in an ACL venue unless you have a good reason to deviate.</b>
+<li>It's up to you whether you want to import the whole ACL Anthology bib file. I would generally <i>not</i> recommend this because it makes it very hard for overleaf to autocomplete refs. But it can be a source to copy-paste bibs from.
+<li>Use @inproceedings for confs, @article for journals
+<li>For confs other than the ACL Anthology, I prefer four fields: year, title, author, booktitle (conf name).
+<li>For arXiv, Semantic Scholar BibTeX may be better than arXiv's. If you use arXiv, you need to change it to @article and add booktitle = {arXiv} or something like that.
+<li>Cite an arxiv paper <b>only</b> if no published version exists. Check this carefully!
+<li>For journals: probably stick with whatever comes out of ACM DL
+<li>AUTHOR: do not use first initials, use full names (ACL anthology does this by default)
+<li>TITLE: Wrap titles in {{ }} to force "true" capitalization. This avoids issues with things like "amr" being lowercased.
+<li>BOOKTITLE: For things not in the anthology, pick a consistent style for confs. One good choice is full names with abbrevs in parentheses. E.g., Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP). Made easier to standardize + change by defining macros: @string{iclr = {Proceedings of the International Conference on Learning Representations (ICLR)}} at the top of the bib file
+
+</body>
+
+</html>

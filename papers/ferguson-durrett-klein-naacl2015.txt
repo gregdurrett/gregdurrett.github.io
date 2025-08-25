@@ -1,0 +1,10 @@
+@InProceedings{FergusonDurrettKlein2015,
+  author    = {Ferguson, James  and  Durrett, Greg  and  Klein, Dan},
+  title     = {Disfluency Detection with a Semi-Markov Model and Prosodic Features},
+  booktitle = {Proceedings of the North American Chapter of the Association for Computational Linguistics},
+  month     = {June},
+  year      = {2015},
+  address   = {Denver, Colorado},
+  publisher = {Association for Computational Linguistics},
+}
+

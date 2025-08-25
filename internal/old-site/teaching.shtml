@@ -1,0 +1,33 @@
+<!--#include FILE="header.html" -->
+
+<h3>Video Lectures</h3>
+
+<p><a href="https://www.cs.utexas.edu/~gdurrett/courses/online-course/materials.html"><b>CS388: Natural Language Process (Online MSCS/MSDS version)</b></a>: video lectures, readings,
+and assignments for the online masters offering of these NLP courses.
+
+<h3>Courses</h3>
+
+<ul>
+<li><b>Spring 2023:</b> <a class="syslink" href="./courses/sp2023/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li><b>Fall 2022:</b> <a class="syslink" href="./courses/fa2022/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li><b>Fall 2021:</b> <a class="syslink" href="./courses/fa2021/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li><b>Spring 2021:</b> <a class="syslink" href="./courses/sp2021/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li><b>Fall 2020:</b> <a class="syslink" href="./courses/fa2020/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li><b>Spring 2020:</b> <a class="syslink" href="./courses/sp2020/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li><b>Fall 2019:</b> <a class="syslink" href="./courses/fa2019/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li><b>Spring 2019:</b> <a class="syslink" href="./courses/sp2019/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li><b>Fall 2018:</b> <a class="syslink" href="./courses/fa2018/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li><b>Fall 2017:</b> <a class="syslink" href="./courses/fa2017/cs395t.shtml">CS395T: Structured Models for NLP</a>
+</li>
+</ul>
+
+<p><a href="https://www.cs.utexas.edu/~gdurrett/courses/nlp-module/"><b>NLP Module for high schools</b></a>: videos and hands-on assignments introducing n-gram language
+models and pre-trained Transformers.
+
+<h3>Publications</h3>
+
+<p>Read about some of the course materials we use in our TeachingNLP workshop paper:<br/><br/>
+<a class="publink" href="http://taur.cs.utexas.edu/papers/durrett-etal-2021-teaching.pdf">Contemporary NLP Modeling in Six Comprehensive Programming Assignments</a><br/>
+Greg Durrett, Jifan Chen, Shrey Desai, Tanya Goyal, Lucas Kabela, Yasumasa Onoe, Jiacheng Xu. <i>Proceedings of the Fifth Workshop on Teaching NLP.</i>
+
+<!--#include FILE="footer.html" -->

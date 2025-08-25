@@ -1,0 +1,34 @@
+<!--#include FILE="header.html" -->
+
+<img id="picimg" src="./photo.png" height="250" align="right" style="margin-left:10px;"/>
+
+<p>I am an Assistant Professor in the <a href="https://www.cs.utexas.edu/">Department of Computer Science</a>
+at <a href="http://www.utexas.edu/">UT Austin</a>, where I lead the <a href="http://taur.cs.utexas.edu/">TAUR Lab</a> and am part of the broader <a href="https://www.nlp.utexas.edu/">UT NLP group</a>.
+My current research covers a range of topics in statistical natural language processing, including question answering, text generation, document summarization, entity analysis, and other types of automated reasoning in natural language.
+Solving these problems lets computers access the information in unstructured text and transform this information in structured ways.
+See my <a href="research.shtml">research page</a> for
+more information.
+
+<p>Prior to joining UT Austin, I received my Ph.D. from UC Berkeley in 2016,
+where I was advised by <a href="http://www.cs.berkeley.edu/~klein/">Dan Klein</a>
+and part of the <a href="http://nlp.cs.berkeley.edu"</a>Berkeley NLP Group</a>.
+
+<p><b><a href="gdurrett-cv.pdf">Curriculum Vitae</a></b>
+
+<h2>Teaching</h2>
+
+<ul>
+<li>Spring 2023: <a class="publink" href="./courses/sp2023/cs388.shtml">CS388: Natural Language Processing (graduate)</a>
+<li>Fall 2022: <a class="publink" href="./courses/fa2022/cs378.shtml">CS378: Natural Language Processing (undergraduate)</a>
+<li>Ongoing: <a class="publink" href="./courses/online-course/materials.html">CS388: Natural Language Processing (online masters version)</a>
+<li><b><a href="./teaching.shtml">Prior teaching</a></b>
+</li>
+</ul>
+
+<a name="publications"></a>
+<h2>Publications</h2>
+
+<h3>Please see <a href="http://taur.cs.utexas.edu/publications.shtml">the TAUR lab group website</a> for publications, preprints, and code links.</h3>
+
+
+<!--#include FILE="footer.html" -->

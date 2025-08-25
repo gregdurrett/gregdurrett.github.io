@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>Reviewing Guidelines</title>
+  <link rel="stylesheet" type="text/css" href="../courses/fa2018/courses.css"/>
+</head>
+
+<body>
+
+<h1>Reviewing</h1>
+
+<p>The purpose of reviewing is twofold:
+
+<ol>
+<li> Render a judgment on a paper so area chairs (ACs) can decide whether to accept or reject it
+<li> Give authors feedback so they know how to improve it
+</ol>
+
+<p>Both points are important.
+
+<p>As you summarize and give strengths/weaknesses (see below), the review should convey your overall
+impression of the paper. The worst kind of review is something which restates the paper, points out several minor issues (like one or two problems with experiments),
+and gives a 3. As an AC, you don't know whether this person was just lazy, didn't like the paper for justified reasons, or didn't like the paper for unjustified
+reasons.
+
+<h2>General Style</h2>
+
+A few general style notes:
+<ol>
+<li> Refer to the paper in the present tense ("this paper presents...")
+<li> Especially if you're being critical, try to refer to the paper rather than the authors. Rather than "The authors' argument is not convincing", say "this paper's argument is not convincing". This softens
+the blow of negative reviews a bit. 
+</ol>
+
+<p>Most conferences now require the following three sections (and this is not a bad structure anyway). Word counts are what I typically write in these
+sections, for an overall length of 300-500 words for short papers and 500-800 words for long papers.
+
+<h2>Summary (100-150 words)</h2>
+
+<p>Try to restate the claims, method, and results of the paper in your own words. This is usually good to do to make sure <b>you</b> understand
+everything clearly. I especially try to give my interpretation of the results here. E.g., regardless of what they say about the results,
+I'll write<br>
+"Results show a minor improvement on three tasks"<br>
+or<br>
+"Results show substantial improvement in-domain and small improvement out of domain"<br>
+or things of that nature. This helps the authors, other reviewers, and ACs interpret your thoughts and understand how you viewed the paper.
+
+<h2>Strengths (50-150 words)</h2>
+
+<p>Usually you want to comment on a few things here:
+
+<ol>
+<li><b>Originality:</b> Is there something really clever / interesting they've done? I often write the most on this point.
+<li><b>Results:</b> Often the model gets SOTA and that's a plus, so you can say that.
+<li><b>Writing:</b> If the paper is well-written or very clear, I usually say that here.
+</ol>
+
+<p>You don't need to justify these points too extensively. You're basically agreeing with the authors here.
+
+<h2>Weaknesses (150-400 words)</h2>
+
+<p>This is usually the longest section, unless a paper is really perfect. Often even if I'm giving a 4-5,
+I still highlight the weaknesses so authors can fix them.
+
+<p>This is usually where I render a judgment (either here or the strengths).
+If the paper is good, you might start the Weaknesses section by saying "There are several
+weaknesses, but none of them are critical." Or if the paper is bad, you might say "There are two main weaknesses that
+contributed to my low score."
+
+<p>What's <b>most important</b> about reviewing is describing the truly important weaknesses and justifying them in as much detail
+as possible. It should be the case that if the authors addressed every weakness you cited, you'd be happy to give them a 4-5.
+
+<p>Common weaknesses:
+
+<ol>
+<li><b>Novelty:</b> The paper may be a minor tweak on a prior method. You should be careful about claiming this. You should justify your claim by pointing
+to the prior method (a specific paper/system) and describing the similarities. As an author, it's very frustrating to read a review which says
+"this is not novel" but the reviewer doesn't say anything more.
+<li><b>Results:</b> Sometimes the authors spent 90% of the paper talking about X but X only helps by 0.2%. In this case, the results aren't good enough for a reader
+to take the time to learn about the method.
+Sometimes there are only limited results on one dataset and they don't compare to enough baselines. While being too results-oriented
+is bad, results are necessary for strong papers.
+<li><b>Problems with experiments/analysis:</b> Related to results, the authors may not have done enough ablations to show that what they did
+is important. They may have drawn what you think are wrong or unjustified conclusions (claiming their method works when it really doesn't
+seem to). For an analysis paper, there may be logical holes in their argument or elements they didn't consider.
+<li><b>Writing:</b> I look past minor grammar errors (but do say if there are lots of them). But if a paper is truly so confusing that you can't make sense of it,
+that's grounds for it being a major weakness.
+</ol>
+
+<p>For all of these points, try to give a detailed sense of why this weakness applies and how you might fix it, if you can do that. For example,
+would you be convinced by seeing a new experiment showing gain over X system on Y dataset? This is helpful so the authors know how to proceed. In general,
+highlighting minor line edits is not a good use of your time.
+
+</body>
+
+</html>

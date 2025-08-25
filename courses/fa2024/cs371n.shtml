@@ -1,0 +1,441 @@
+<html>
+<head>
+  <title>CS371N</title>
+  <link rel="stylesheet" type="text/css" href="courses.css"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56941424-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<h1>CS371N: Natural Language Processing (Fall 2024)</h1>
+
+<p>Instructor: <a href="http://cs.utexas.edu/~gdurrett">Greg Durrett</a>, <a href="mailto:gdurrett@cs.utexas.edu">gdurrett@cs.utexas.edu</a>
+<br/>Lecture: Tuesday and Thursday 9:30am - 10:45am, JGB 2.218
+<br/>Instructor Office Hours: Monday 1pm-2pm, Thursday 2pm-3pm, GDC 3.812 and on Zoom (hybrid; see Canvas for link)
+<br/>TAs: Juan Diego Rodriguez, Grace Kim
+<br/>TA Office Hours:
+<ul>
+        <li>Tuesday 11am, Desk 5 GDC TA Station (1st floor) [Juan Diego] </li>
+        <li>Wednesday 4pm, Desk 1 GDC TA Station (1st floor) [Grace] </li>
+        <li>Thursday 5pm, Desk 5 GDC TA Station (1st floor) [Juan Diego] </li>
+        <li>Friday 3pm, Desk 1 GDC TA Station (1st floor) [Grace] </li>
+</ul>
+<p>See Canvas for a link to the discussion board (Ed Discussion)</p>
+
+<h2><b><a href="./syllabus.shtml">[Link to syllabus with detailed course policies]</a></b></h2>
+
+<h2>Description</h2>
+
+<p> This course provides an introduction to modern natural language processing
+using machine learning and deep learning approaches. Content includes
+linguistics fundamentals (syntax, semantics, distributional properties of
+language), machine learning models (classifiers, sequence taggers, Transformers, and large language models),
+algorithms for decoding and inference, and contemporary methods for applying language models to solve
+a range of problems. Students will get hands-on experience building systems to do tasks
+including text classification, language modeling, and textual entailment.
+
+<p><b>Requirements</b>
+<ul>
+<li>CS 429</li>
+<li>Recommended: CS 331, familiarity with probability and linear algebra, programming experience in Python</li>
+<li>Helpful: Exposure to AI and machine learning (e.g., CS 342/343/363)</li>
+</ul>
+
+<h2>Course Details</h2>
+
+<p>The course lectures will be delivered in a traditional, in-person format. Recordings will be made available
+via the LecturesOnline service for students to browse after class. All course materials will be posted
+on this website. Note that additional pre-recorded video content overlapping with the concepts in this course
+is available on the <a href="https://www.cs.utexas.edu/~gdurrett/courses/online-course/materials.html">CS388 website</a>.
+
+<p>The exam will be given in-person. Contact the instructor ASAP if this poses a problem for you.
+
+<h1><a href="./syllabus.shtml">Syllabus [Clickable link with important information about the course policies. The current page you are on is NOT the syllabus]</a></h1>
+
+<p><b>Assignments:</b>
+
+<p><b><a href="a0.pdf">Assignment 0: Warmup</a> (ungraded)</b> <a href="nyt.txt">[nyt dataset]</a> <a href="tokenizer.py">[tokenizer.py]</a> <a href="a0-solns.pdf">[solutions]</a>
+
+<p><b><a href="a1.pdf">Assignment 1: Sentiment Classification</a> (due September 12, 11:59pm)</b> <a href="a1-distrib.tgz"><b>[Code and data]</a></b>
+
+<p><b><a href="a2.pdf">Assignment 2: Feedforward Neural Networks and Optimization</a> (due September 26, 11:59pm)</b> <a href="a2-distrib.tgz"><b>[Code and data]</b></a>
+
+<p><b><a href="a3.pdf">Assignment 3: Transformer Language Modeling</a> (due October 10, 11:59pm)</b> <a href="a3-distrib.tgz"><b>[Code and data]</b></a>
+
+<p><b><a href="a4.pdf">Assignment 4: Sequence Modeling and Parsing (due October 22, 11:59pm)</a></b>
+
+<p><b><a href="fa24-midterm-topics.pdf">Midterm (topics)</a> [midterm in-class on Thursday, October 24]</b> [fall 2023 <a href="fa23-cs371n-midterm.pdf">midterm</a> / <a href="fa23-cs371n-midterm-solns.pdf">solutions</a>, fall 2022 <a href="fa22-cs371n-midterm.pdf">midterm</a> / <a href="fa22-cs371n-midterm-solns.pdf">solutions</a>]
+
+<p><b><a href="a5.pdf">Assignment 5: Factuality of ChatGPT</a> (due November 7, 11:59pm)</b> <a href="a5-distrib.tgz"><b>[Code and data]</b></a>
+
+<!-- <p><b><a href="a5.pdf">Assignment 5: ???</a> (due November 8, 11:59pm)</b> -->
+
+<!--<p><b>Final Project: Dataset Artifacts</b> <b><a href="fp-preliminary.pdf">[instructions for independent projects]</a></b> -->
+
+<p><b><a href="fp.pdf">Final Project: Dataset Artifacts [instructions]</b></a>, <b><a href="https://github.com/gregdurrett/fp-dataset-artifacts">[Code]</a></b>, <b><a href="fp-preliminary.pdf">[instructions for independent projects]</a> <a href="project-ex-1.pdf">[Project sample 1]</a> <a href="project-ex-2.pdf">[Project sample 2]</a></b>
+
+
+<p><b>Readings:</b> Textbook and paper readings are assigned to complement the material discussed in lecture. You may find it useful
+to do these readings before lecture as preparation or after lecture to review, but you are not expected to know everything discussed
+in the textbook if it isn't covered in lecture.
+Paper readings are intended to supplement the course material if you are interested in diving deeper on particular topics.
+
+<p>The chief text in this course is <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein: Natural Language Processing</a>,
+available as a free PDF online. 
+(Another generally useful NLP book is <a href="https://web.stanford.edu/~jurafsky/slp3/">Jurafsky and Martin: Speech and Language Processing (3rd ed. draft)</a>, with many draft chapters available for free online; however,
+we will not be using it much for this course.)
+
+<p><b>Schedule (subject to change through the first day of classes)</b>
+<br>
+<br>
+
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber5" width="800">
+  <tr>
+    <td width="70" height="18"><b>Date</b></td>
+    <td width="270" height="18"><b>Topics</b></td>
+    <td width="210" height="18"><b>Readings</b></td>
+    <td width="100" height="18"><b>Assignments</b></td>
+  </tr>
+  <tr bgcolor="#F2F2F2">            
+        <td width="70">Aug 27</td>
+        <td><a href="lectures/lec1-1pp.pdf">Introduction</a> <a href="lectures/lec1-4pp.pdf">[4pp]</a></td>
+        <td>
+          
+        </td>
+        <td>A0 out (ungraded)</td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Aug 29</td>
+        <td><a href="lectures/lec2-notes.pdf">Classification 1: Features, Perceptron</a></td>
+        <td>
+          <a href="perc-lr-connections.pdf">Classification lecture note</a><br/>
+          <a href="https://youtu.be/hhTkyP7EzGw">Perceptron Loss (VIDEO)</a><br/>
+          <a href="perc_lecture_plot.py">perc_lecture_plot.py</a><br/>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 2.0, 2.1, 2.3.1, 4.1, 4.3</a>
+        </td>
+        <td>A1 out</td>
+      </tr>
+      <tr>            
+        <td width="70">Sept 3</td>
+        <td><a href="lectures/lec3-notes.pdf">Classification 2: Logistic Regression</a></td>
+        <td>
+          <a href="perc-lr-connections.pdf">Classification lecture note</a><br/>
+          <a href="https://youtu.be/65ui-GdtY0Q">Optimization (VIDEO)</a><br/>
+          <a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf">Jurafsky and Martin 5.0-5.3</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Sept 5</td>
+        <td><a href="lectures/lec4-notes.pdf">Classification 3: Multiclass, Examples</a> (slides: <a href="lectures/lec4-1pp.pdf">[1pp]</a> <a href="lectures/lec4-4pp.pdf">[4pp]</a>)</td>
+        <td>
+          <a href="multiclass.pdf">Multiclass lecture note</a><br/>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 2.4.1, 2.5, 2.6, 4.2</a><br/>
+          <a href="http://www.aclweb.org/anthology/W02-1011">Pang+02</a><br/>
+          <a href="https://www.aclweb.org/anthology/P12-2018">Wang+Manning12</a><br/>
+          <a href="https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf">Socher+13 Sentiment</a><br/>
+          <a href="http://aclweb.org/anthology/D13-1193">Schwartz+13 Authorship</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Sept 10</td>
+        <td><a href="lectures/lec5-1pp.pdf">Classification 4: Fairness / Neural 1: Feedforward, Backpropagation</a> <a href="lectures/lec5-4pp.pdf">[4pp]</a> <a href="lectures/lec5-notes.pdf">[handwritten notes]</a></td>
+        <td>
+          <a href="https://youtu.be/N4f2-S19LME">Fairness (VIDEO)</a><br/>
+          <a href="https://arxiv.org/pdf/1811.10104.pdf">HutchinsonMitchell18 Fairness</a><br/>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 3.0-3.3</a><br/>
+          <a href="https://arxiv.org/pdf/1510.00726.pdf">Goldberg 4</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Sept 12</td>
+        <td><a href="lectures/lec6-1pp.pdf">Neural 2: Implementation, Word embeddings intro</a> <a href="lectures/lec6-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://youtu.be/KPZb2rYS4BE">Neural Net Optimization (VIDEO)</a><br/>
+          <a href="./ffnn_example.py">ffnn_example.py</a><br/>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 3.3</a><br/>
+          <a href="https://arxiv.org/pdf/1510.00726.pdf">Goldberg 3, 6</a><br/>
+          <a href="http://cs.umd.edu/~miyyer/pubs/2015_acl_dan.pdf">Iyyer+15 DANs</a><br/>
+          <a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b">Init and backprop</a>
+        </td>
+        <td>A1 due/A2 out</td>
+      </tr>
+      <tr>            
+        <td width="70">Sept 17</td>
+        <td><a href="lectures/lec7-1pp.pdf">Neural 3: Word embeddings</a> <a href="lectures/lec7-4pp.pdf">[4pp]</a> <a href="lectures/lec7-notes.pdf">[handwritten notes]</a></td>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 14.5-14.6</a><br/>
+          <a href="https://arxiv.org/pdf/1510.00726.pdf">Goldberg 5</a><br/>
+          <a href="https://arxiv.org/pdf/1301.3781.pdf">Mikolov+13 word2vec</a><br/>
+          <a href="https://nlp.stanford.edu/pubs/glove.pdf">Pennington+14 GloVe</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Sept 19</td>
+        <td><a href="lectures/lec8-1pp.pdf">Neural 4: Bias, multilingual</a> <a href="lectures/lec8-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1607.06520.pdf">Bolukbasi+16 Gender</a><br/>
+          <a href="https://arxiv.org/pdf/1903.03862.pdf">Gonen+19 Debiasing</a><br/>
+          <a href="https://arxiv.org/pdf/1602.01925.pdf">Ammar+16 Xlingual embeddings</a><br/>
+          <a href="https://arxiv.org/pdf/1309.4168.pdf">Mikolov+13 Word translation</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Sept 24</td>
+        <td><a href="lectures/lec9-notes.pdf">LM 1: N-grams, RNNs</a></td>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 6.1-6.2</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Sept 26</td>
+        <td><a href="lectures/lec10-notes.pdf">LM 2: Self-attention, Transformers</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1508.04025.pdf">Luong+15 Attention</a><br/>
+          <a href="https://arxiv.org/pdf/1706.03762.pdf">Vaswani+17 Transformers</a><br/>
+          <a href="https://jalammar.github.io/illustrated-transformer/">Alammar Illustrated Transformer</a><br/>
+          <a href="https://arxiv.org/pdf/2207.09238.pdf">PhuongHutter Transformers</a>
+        </td>
+        <td>A2 due / A3 out</td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 1</td>
+        <td><a href="lectures/lec11-1pp.pdf">LM 3: Implementation, Extensions</a> <a href="lectures/lec11-4pp.pdf">[4pp]</a> <a href="lectures/lec11-notes.pdf">[handwritten notes]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/2001.08361.pdf">Kaplan+20 Scaling Laws</a><br/>
+          <a href="https://arxiv.org/pdf/2004.05150.pdf">Beltagy+20 Longformer</a><br/>
+          <a href="https://arxiv.org/pdf/2009.14794.pdf">Choromanski+21 Performer</a><br/>
+          <a href="https://arxiv.org/pdf/2009.06732.pdf">Tay+20 Efficient Transformers</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 3</td>
+        <td><a href="lectures/lec12-1pp.pdf">Pre-training 1: Encoders (BERT), Tokenization</a> <a href="lectures/lec12-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1802.05365.pdf">Peters+18 ELMo</a><br/>
+          <a href="https://arxiv.org/abs/1810.04805">Devlin+19 BERT</a><br/>
+          <a href="https://jalammar.github.io/illustrated-bert/">Alammar Illustrated BERT</a><br/>
+          <a href="https://arxiv.org/pdf/1907.11692.pdf">Liu+19 RoBERTa</a><br/>
+          <a href="https://arxiv.org/pdf/2004.03720.pdf">BostromDurrett20 Tokenizers</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Oct 8</td>
+        <td><a href="lectures/lec13-1pp.pdf">Pre-training 2: Decoders (GPT/T5), Decoding Methods</a> <a href="lectures/lec13-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1910.10683.pdf">Raffel+19 T5</a><br/>
+          <a href="https://arxiv.org/pdf/1910.13461.pdf">Lewis+19 BART</a><br/>
+          <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">Radford+19 GPT2</a><br/>
+          <a href="https://arxiv.org/pdf/2005.14165.pdf">Brown+20 GPT3</a><br/>
+          <a href="https://arxiv.org/pdf/2204.02311.pdf">Chowdhery+21 PaLM</a><br/>
+          <a href="https://arxiv.org/pdf/1904.09751.pdf">Holtzman+19 Nucleus Sampling</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Oct 10</td>
+        <td><a href="lectures/lec14-notes.pdf">Sequence 1: Tagging, POS, HMMs</a>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 7.1-7.4, 8.1</a>
+        </td>
+        <td>A3 due/A4 out</td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 15</td>
+        <td><a href="lectures/lec15-notes.pdf">Sequence 2: HMMs, Viterbi</a></td>
+        <td>
+          <a href="https://www.cs.utexas.edu/~gdurrett/courses/fa2021/viterbi.pdf">Viterbi lecture note</a><br/>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 7.1-7.4</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 17</td>
+        <td><a href="lectures/lec16-1pp.pdf">Trees 1: PCFGs, CKY</a> <a href="lectures/lec16-4pp.pdf">[4pp]</a> <a href="lectures/lec16-notes.pdf">[handwritten notes]</a> </td>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 10.1-3, 10.4.1</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Oct 22</td>
+        <td><a href="lectures/lec17-1pp.pdf">Trees 2: Dependency, Shift-reduce</a> <a href="lectures/lec17-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 11.3-4</a><br/>
+          <a href="https://nlp.stanford.edu/manning/papers/unlexicalized-parsing.pdf">KleinManning03 Unlexicalized</a><br/>
+          <a href="https://www.aclweb.org/anthology/D14-1082.pdf">ChenManning14</a><br/>
+          <a href="https://arxiv.org/pdf/1603.06042.pdf">Andor+16</a>
+        </td>
+        <td>A4 due</td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Oct 24</td>
+        <td><a href="lectures/lec18-1pp.pdf">Midterm</a> <a href="lectures/lec18-4pp.pdf">[4pp]</a></td>
+        <td>
+          
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 29</td>
+        <td><a href="lectures/lec18-1pp.pdf">Understanding GPT3 1: Prompting GPT-3, Factuality</a> <a href="lectures/lec18-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/2102.09690.pdf">Zhao+21 Calibrate Before Use</a><br/>
+          <a href="https://arxiv.org/pdf/2202.12837.pdf">Min+22 Rethinking Demonstrations</a><br/>
+          <a href="https://arxiv.org/pdf/2212.04037.pdf">Gonen+22 Demystifying Prompts</a><br/>
+          <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">Olson+22 Induction Heads</a><br/>
+          <a href="https://arxiv.org/pdf/2305.14251.pdf">Min+23 FActScore</a><br/>
+          <a href="https://arxiv.org/pdf/2210.08726.pdf">Gao+22 RARR</a>
+        </td>
+        <td>A5 out</td>
+      </tr>
+      <tr>            
+        <td width="70">Oct 31</td>
+        <td><a href="lectures/lec19-1pp.pdf">Understanding GPT3 2: Rationales, Chain-of-thought</a> <a href="lectures/lec19-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1812.01193.pdf">Camburu+18 e-SNLI</a><br/>
+          <a href="https://arxiv.org/pdf/2201.11903.pdf">Wei+22 CoT</a><br/>
+          <a href="https://arxiv.org/pdf/2205.03401.pdf">YeDurrett22 Unreliability</a><br/>
+          <a href="https://arxiv.org/pdf/2205.11916.pdf">Kojima+22 Step-by-step</a><br/>
+          <a href="https://arxiv.org/pdf/2211.10435.pdf">Gao+22 Program-aided</a><br/>
+          <a href="https://arxiv.org/abs/2409.12183">Sprague+24 To CoT or not to CoT</a><br/>
+          <a href="https://arxiv.org/pdf/2305.09656.pdf">Ye+23 SatLM</a><br/>
+          <a href="https://arxiv.org/abs/2305.10601">Yao+23 Tree-of-thought</a>
+        </td>
+        <td>Custom FP proposals due</td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Nov 5</td>
+        <td><a href="lectures/lec20-1pp.pdf">Understanding GPT3 3: Instruction tuning, RL in NLP</a> <a href="lectures/lec20-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/2110.08207.pdf">Sanh+21 T0</a><br/>
+          <a href="https://arxiv.org/pdf/2107.13586.pdf">Liu+21 Prompting</a><br/>
+          <a href="https://arxiv.org/pdf/2210.11416.pdf">Chung+22 Flan-PaLM</a><br/>
+          <a href="https://arxiv.org/pdf/2203.02155.pdf">Ouyang+22 Human Feedback</a><br/>
+          <a href="https://arxiv.org/pdf/2305.18290.pdf">Rafailov+23 DPO</a><br/>
+          <a href="https://arxiv.org/pdf/2310.03716.pdf">Singhal+23 Length</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Nov 7</td>
+        <td><a href="lectures/lec21-1pp.pdf">Understanding NNs 1: Dataset Bias</a> <a href="lectures/lec21-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1803.02324.pdf">Gururangan+18 Artifacts</a><br/>
+          <a href="https://arxiv.org/pdf/1902.01007.pdf">McCoy+19 Right</a><br/>
+          <a href="https://arxiv.org/pdf/2004.02709.pdf">Gardner+20 Contrast</a><br/>
+          <a href="https://arxiv.org/pdf/2009.10795.pdf">Swayamdipta+20 Cartography</a><br/>
+          <a href="https://arxiv.org/pdf/2009.12303.pdf">Utama+20 Debiasing</a>
+        </td>
+        <td>A5 due / FP out</td>
+      </tr>
+      <tr>            
+        <td width="70">Nov 12</td>
+        <td><a href="lectures/lec22-1pp.pdf">Understanding NNs 2: Interpretability</a> <a href="lectures/lec22-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/1606.03490.pdf">Lipton+16 Mythos</a><br/>
+          <a href="https://arxiv.org/pdf/1602.04938.pdf">Ribeiro+16 LIME</a><br/>
+          <a href="https://arxiv.org/pdf/1312.6034.pdf">Simonyan+13 Visualizing</a><br/>
+          <a href="https://arxiv.org/pdf/1703.01365.pdf">Sundararajan+17 Int Grad</a><br/>
+          <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020">Interpretation Tutorial</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Nov 14</td>
+        <td><a href="lectures/lec23-1pp.pdf">Machine Translation, Multilinguality</a> <a href="lectures/lec23-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Eisenstein 18.1-18.2, 18.4</a><br/>
+          <a href="http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/ibm12.pdf">Michael Collins IBM Models 1+2</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Nov 19</td>
+        <td><a href="lectures/lec24-1pp.pdf">Language Grounding</a> <a href="lectures/lec24-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/2103.00020.pdf">Radford+21 CLIP</a><br/>
+          <a href="https://arxiv.org/pdf/2204.01691.pdf">Ahn+22 SayCan</a><br/>
+          <a href="https://arxiv.org/pdf/2303.03378.pdf">Driess+23 PaLM-E</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Nov 21</td>
+        <td><a href="lectures/lec25-1pp.pdf">Modern Topics 1: LLM efficiency</a> <a href="lectures/lec25-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/pdf/2211.17192.pdf">Levaiathan+23 Speculative</a><br/>
+          <a href="https://www.together.ai/blog/medusa">Medusa Heads (blog)</a><br/>
+          <a href="https://arxiv.org/abs/2205.14135">Dao+23 Flash Attention</a><br/>
+          <a href="https://arxiv.org/abs/2310.06694">Xia+23 Sheared Llama</a><br/>
+          <a href="https://arxiv.org/abs/1910.01108">Sanh+19 DistilBERT</a><br/>
+          <a href="https://arxiv.org/abs/2305.02301">Hsieh+23 Distill Step-by-Step</a><br/>
+          <a href="https://arxiv.org/abs/2106.10199">Zakan+22 BitFit</a><br/>
+          <a href="https://arxiv.org/abs/2106.09685">Hu+21 LoRA</a><br/>
+          <a href="https://arxiv.org/abs/2208.07339">Dettmers+22 LLM.int8()</a><br/>
+          <a href="https://arxiv.org/abs/2305.14314">Dettmers+23 QLoRA</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Nov 26</td>
+        <td>NO CLASS</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>            
+        <td width="70">Nov 28</td>
+        <td>NO CLASS</td>
+        <td></td>
+        <td></td>
+      </tr>
+     <tr bgcolor="#F2F2F2">            
+        <td width="70">Dec 3</td>
+        <td><a href="lectures/lec26-1pp.pdf">Modtern Topics 2: LLM safety, RAG</a> <a href="lectures/lec26-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://arxiv.org/abs/2308.03825">Shen+23 Jailbreaking</a><br/>
+          <a href="https://arxiv.org/abs/2307.15043">Zou+23 Attacks on LLMs</a><br/>
+          <a href="https://arxiv.org/abs/2310.02238">EldanRussinovich23 Unlearning</a><br/>
+          <a href="https://arxiv.org/abs/2110.11309">Mitchell+22 Model Editing</a><br/>
+          <a href="https://arxiv.org/abs/2305.01651">Onoe+23 Challenges in Propagating</a>
+        </td>
+        <td></td>
+      </tr>
+      <tr bgcolor="#F2F2F2">            
+        <td width="70">Dec 5</td>
+        <td><a href="lectures/lec27-1pp.pdf">Wrapup + Ethics</a> <a href="lectures/lec27-4pp.pdf">[4pp]</a></td>
+        <td>
+          <a href="https://www.aclweb.org/anthology/P16-2096.pdf">HovySpruit16 Social Impact of NLP</a><br/>
+          <a href="https://arxiv.org/pdf/1707.09457.pdf">Zhao+17 Bias Amplification</a><br/>
+          <a href="https://arxiv.org/pdf/1804.09301.pdf">Rudinger+18 Gender Bias in Coref</a><br/>
+          <a href="http://faculty.washington.edu/ebender/papers/Stochastic_Parrots.pdf">BenderGebru+21 Stochastic Parrots</a><br/>
+          <a href="https://arxiv.org/pdf/1803.09010.pdf">Gebru+18 Datasheets for Datasets</a><br/>
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3351095.3372873">Raji+20 Auditing</a>
+        </td>
+        <td>FP due Dec 13</td>
+      </tr>
+    
+</table>
+
+
+
+</body>
+
+</html>

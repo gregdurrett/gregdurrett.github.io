@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Reimbursement Instructions</title>
+  <link rel="stylesheet" type="text/css" href="../courses/fa2018/courses.css"/>
+</head>
+
+<body>
+
+<h1>Reimbursement Instructions</h1>
+
+<p><b>Remote conferences: much of this doesn't apply, but you still need to fill out the RTA to be reimbursed for registration!</b>
+
+<!--<h2>Reimbursement policy</h2>
+
+<p><b>I will always pay for people to attend the conferences where they are presenting stuff, including Findings papers.</b> If you are 2nd+ author, we don't have a firm policy one way or another, but I'm happy to discuss case-by-case. Things to consider would be how heavy your role in the work was, how many other conferences you're attending that year, graduation timelines and how those impact networking, etc.
+
+<p>I am also willing to pay in other cases, including if you're early in your career and it would be one of your first conferences, if it's a US-based conference and visa issues have prevented you from attending others, or other circumstances. The AI lab has some money for this purposes as well (see below under "AI Lab Grants").<p>
+-->
+
+<h2>Before the conference</h2>
+
+<p>TL;DR: Book everything, fill out an RTA, check if you should apply for the AI lab grant
+
+<p>My general policy is that if you're going to a conference, you shouldn't "cheap out" on it. The cheapest flights and accommodation often don't even save you that much (maybe 30%-40% off the total price) and sometimes have significant inconvenience. Particularly if you're presenting, it's of highest importance that you arrive on time and be well-rested for your presentation. This means taking reasonable flights so you're not exhausted and to minimize the chance of delay.
+
+<p><b>Registration: </b> Register for tutorials and workshops if these will be useful to you. For conference registration, note that ACL membership is reimbursable as part of the cost of attending.
+
+<p><b>Flights: </b> Prefer direct flights. If going international, try to have the international leg first or a longer layover (at least 2 hours) before it so you have a good chance of getting to the right continent without issues. (I was a day late to ACL 2013 in Bulgaria from this.) Most airlines are okay to book on, but don't book through weird budget sites (justfly.com, etc.) since usually if anything goes wrong, you often can't get assistance.
+
+<p><b>Accommodation: </b> Two people to a room in the conference hotel is the default. Other hotels (including student accommodations) are fine but only if they're reasonable close (less than a 10 minute walk). Airbnb / Vrbo is okay (for a while Airbnb wasn't but this is fixed).
+
+<p>Once you're ready, you should go through the following steps:
+
+<ol>
+<li> Book flights, hotel, and conference registration. For conference registration, note that ACL membership is reimbursable as part of the cost of attending
+<li> <b><a href="https://apps.cs.utexas.edu/apps/rta">FILL OUT THE RTA; YOU MUST DO THIS IN ORDER TO BE REIMBURSED!</a></b> Indicate that there is a cost to the university. For "Account" and "Number", put "Route to Tiffany" in the fields.
+<li>Fill out the other forms at the top of the RTA: <a href="https://apps.cs.utexas.edu/apps/sites/default/files/docs/medauth_adult.pdf">Medical authorization</a>, <a href="https://apps.cs.utexas.edu/apps/sites/default/files/docs/release_student.pdf">Student release</a>
+<li>If international travel, fill out the international travel forms as well (linked from the top of the RTA)
+<li>AI Lab Grants: If (a) it's your first time attending an academic conference; OR (b) you're presenting a paper for the first time this academic year, then the AI Lab can give you a grant of $500 to attend the conference. Send Tiffany an email describing the circumstances if this applies to you.
+</ol>
+
+
+<h2>During the conference</h2>
+
+<p>TL;DR: Save itemized food receipts, split the hotel bill correctly
+
+<p><b>Food:</b> Food can be reimbursed but alcohol cannot. However, it must be <i>your</i> food that you consumed and paid for (you cannot pay for someone else's food, even if it's a UT student), and to make it clear that it's food and not alcohol, you must get itemized receipts for each meal. Note that you cannot be reimbursed for more than $51 per day for food.
+
+<p>Q: What if I order both food and alcohol?<br>
+A: That's fine, just strike out the alcohol items on the receipt and update the amount you request to be reimbursed.
+
+<p>Q: What if I go out with a big group and the restaurant refuses to separate checks?<br>
+A: If you can get one of the few copies of the itemized receipt with everyone's food, this is still okay. If you can't, you may be out of luck. Fortunately, more expensive places are usually more willing to do this, as well as places in other countries where they can easily bring the credit card reader to the table and iterate through people.
+
+<p><b>Hotel check-out:</b> <b>If you split a room with another student, each of you should pay your share of the bill (half for shared nights, entire bill for alone nights). (UT rules are that no matter who pays, the max reimbursement a person can claim is the room total / per guest listed on the folio.)</b> All hotels I've stayed at have done this: I have done it in the US, Canada, Germany, China, Korea, etc. To make things go smoothly, you and your roommate should talk to the front desk before the first of you departs.
+
+
+
+<h2>After the conference</h2>
+
+<p>TL;DR: Submit reimbursements promptly, in an organized way, with valid receipts
+
+<p><b>Reimbursement request:</b> Gather your receipts (flight, hotel, registration, meals) and please fill out <a href="https://docs.google.com/spreadsheets/d/1PjK1xJSxgiupVfVHXF7_bBP79kID7APfl2QtbWncmaw/edit?usp=sharing">this spreadsheet</a> with itemized expenses. Clearly describe each item and put the amount for it. Submit this form and receipts in a Google Drive folder <i>within 45 days, as soon as possible</i> after the conference. After 60 days, <b>you will not be able to be reimbursed</b>, and the paperwork takes time to process.
+
+<p>Q: What should I submit for flight/registration/etc. receipts?<br>
+A: Receipts must indicate that the item was paid for. Typically if a receipt has the last 4 digits of a credit card number, this is fine. In many cases, the booking email for a flight indicates an airfare but does not indicate payment. You have two options: include a screenshot of your bank/credit card statement showing the charge, or print the receipt at the airport along with your boarding pass.
+
+<p>Q: Should I submit physical or electronic receipts?<br>
+A: If you have original physical copies of the receipts, you can submit those (I think). If you take phone pictures of your receipts to submit electronically, make sure the quality is decent, the receipt is legible, etc. It's safest to save the physical receipt until the reimbursement has been processed in case there's a problem.
+
+<p>If you have any questions, please contact Tiffany Guridy if you're in the AI lab, or your appropriate administrator. And listen to what they tell you to do :)
+
+</body>
+
+</html>

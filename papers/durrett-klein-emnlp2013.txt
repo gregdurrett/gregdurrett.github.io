@@ -1,0 +1,10 @@
+@InProceedings{DurrettKlein2013,
+  author    = {Durrett, Greg  and  Klein, Dan},
+  title     = {Easy Victories and Uphill Battles in Coreference Resolution},
+  booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing},
+  month     = {October},
+  year      = {2013},
+  address   = {Seattle, Washington},
+  publisher = {Association for Computational Linguistics},
+}
+
