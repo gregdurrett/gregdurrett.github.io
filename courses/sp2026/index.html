@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,209 +5,588 @@
   <title>Building LLM Reasoners | CSCI-GA.3033-131 / DS-GA.3001-009</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Monospaced font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Layout with sidebar */
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    /* Sidebar navigation */
+    .sidebar {
+      width: 180px;
+      flex-shrink: 0;
+      padding-right: 24px;
+      position: sticky;
+      top: 32px;
+      align-self: flex-start;
+    }
+
+    .sidebar nav {
+      background: var(--bg-muted);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px;
+    }
+
+    .sidebar .nav-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .sidebar .nav-link {
+      display: block;
+      padding: 8px 12px;
+      margin: 4px 0;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--text-main);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+
+    .sidebar .nav-link:hover {
+      background: var(--border-subtle);
+    }
+
+    .sidebar .nav-link.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Main content area */
+    .main-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Override .page styles when inside layout */
+    .layout .page {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Content sections */
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+        padding: 20px 14px 32px;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 24px;
+        position: static;
+      }
+
+      .sidebar nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+      }
+
+      .sidebar .nav-title {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
+
+      .sidebar .nav-link {
+        margin: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="page">
-    <header class="page-header">
-      <h1 class="course-title">Building LLM Reasoners</h1>
-      <div class="course-codes">CSCI-GA.3033-131 · DS-GA.3001-009</div>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <div class="nav-title">Navigation</div>
+        <a href="#" class="nav-link active" data-section="home">Home</a>
+        <a href="#" class="nav-link" data-section="syllabus">Syllabus</a>
+      </nav>
+    </aside>
 
-      <div class="course-meta">
-        <div><span class="meta-label">Instructor:</span> Greg Durrett (<a href="mailto:gdurrett@nyu.edu">gdurrett@nyu.edu</a>)</div>
-        <div><span class="meta-label">Lecture:</span> Friday 12:30pm–2:30pm · CIWW 101</div>
+    <div class="main-content">
+      <!-- HOME SECTION -->
+      <div id="home" class="content-section active">
+        <div class="page">
+          <header class="page-header">
+            <h1 class="course-title">Building LLM Reasoners</h1>
+            <div class="course-codes">CSCI-GA.3033-131 · DS-GA.3001-009</div>
+
+            <div class="course-meta">
+              <div><span class="meta-label">Instructor:</span> Greg Durrett (<a href="mailto:gdurrett@nyu.edu">gdurrett@nyu.edu</a>)</div>
+              <div><span class="meta-label">Lecture:</span> Friday 12:30pm–2:30pm · CIWW 101</div>
+              <div><span class="meta-label">TAs:</span> Shaswat Patel, Harry Wang (see Brightspace for contact and office hours)</div>
+              <div><span class="meta-label">Course contact:</span> <a>nyubuildingllmreasoners@googlegroups.com</a></div>
+            </div>
+          </header>
+
+          <main>
+            <section class="section">
+              <h2>Course Description</h2>
+              <p>
+                Large language models are a foundational building block of generative AI systems.
+                Modern LLMs go far beyond the capabilities of early LLMs like GPT-3 by demonstrating
+                the capacity for reasoning in natural language. This course provides a hands-on
+                crash course into what makes these models work, covering:
+              </p>
+              <ul>
+                <li>Fundamental building blocks like tokenizers and optimizers</li>
+                <li>Optimizations such as FlashAttention</li>
+                <li>
+                  Approaches for learning reasoners such as supervised fine-tuning,
+                  reinforcement learning, and inference-time methods
+                </li>
+              </ul>
+              <p>
+                Assignments will focus on implementation of these approaches. We will start with
+                a moderately intensive programming assignment requiring implementing a Transformer
+                language model from scratch and making it fast. You will be expected to do this
+                in the first few weeks of the semester.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Recommended Prerequisites</h2>
+              <ul>
+                <li>
+                  CSCI-GA.2590 Natural Language Processing or equivalent.
+                  You should be familiar with the Transformer architecture (fairly comfortable
+                  with the material in
+                  <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener noreferrer">this post</a>).
+                </li>
+                <li>CSCI-GA.2565 Machine Learning or equivalent</li>
+                <li>Deep learning or equivalent</li>
+                <li>Python programming experience, including PyTorch</li>
+                <li>Experience with concepts from probability and linear algebra</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Assignments</h2>
+              <ul>
+                <li>Assignment 1: Building a Transformer LM</li>
+                <li>Assignment 2: Systems and Parallelism</li>
+                <li>Midterm Exam</li>
+                <li>Assignment 3: Alignment and Reasoning RL</li>
+                <li>Final Project</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Schedule</h2>
+              <!-- p class="schedule-note">
+                Topics, dates, and assignments are approximate and subject to change.
+                There will be a midterm exam, to be scheduled.
+              </p -->
+
+              <div class="table-wrapper">
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Topic</th>
+                      <th>Details</th>
+                      <th>Assignment</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jan 23</td>
+                      <td>Intro, Transformers Review</td>
+                      <td>Course overview; expectations; review of the Transformer architecture.</td>
+                      <td>Assignment 1 released</td>
+                    </tr>
+                    <tr>
+                      <td>Jan 30</td>
+                      <td>Tokenizers, Optimizers, and Tricks</td>
+                      <td>Tokenizers, positional encodings, optimizers, and other stuff needed to make Transformer LLMs work.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Feb 6</td>
+                      <td>Making LLMs Fast I</td>
+                      <td>GPUs, memory layouts, and FlashAttention.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Feb 13</td>
+                      <td>Making LLMs Fast II</td>
+                      <td>Inference-time optimization, KV caching</td>
+                      <td>Assignment 1 due · Assignment 2 released · In-class quiz 1</td>
+                    </tr>
+                    <tr>
+                      <td>Feb 20</td>
+                      <td>Scaling Laws</td>
+                      <td>Empirical scaling laws with connections to convergence rates of estimators, model/data/compute tradeoffs.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Feb 27</td>
+                      <td>Training I: SFT &amp; RLHF</td>
+                      <td>Supervised fine-tuning, reinforcement learning from human feedback, and how they're used to train LLMs</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Mar 6</td>
+                      <td>Training II: GRPO &amp; RLVR</td>
+                      <td>Training methods for modern reasoners</td>
+                      <td>Assignment 2 due · Assignment 3 released · In-class quiz 2</td>
+                    </tr>
+                    <tr>
+                      <td>Mar 13</td>
+                      <td>Midterm</td>
+                      <td>In-class midterm exam</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Mar 20</td>
+                      <td>No Class</td>
+                      <td>Spring Break.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Mar 27</td>
+                      <td>TBD</td>
+                      <td>Topic to be announced.</td>
+                      <td>Final project proposals due</td>
+                    </tr>
+                    <tr>
+                      <td>Apr 3</td>
+                      <td>LLM Evaluation</td>
+                      <td>Principles for evaluating LLMs, including statistical testing and benchmark design practices</td>
+                      <td>Assignment 3 due · In-class quiz 3</td>
+                    </tr>
+                    <tr>
+                      <td>Apr 10</td>
+                      <td>Multimodality</td>
+                      <td>LLMs beyond text: vision, audio, and other modalities.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Apr 17</td>
+                      <td>Agents</td>
+                      <td>Tool calling, MCP, computer use agents, and agentic workflows.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Apr 24</td>
+                      <td>TBD</td>
+                      <td>Topic to be announced.</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>May 1</td>
+                      <td>Project Presentations</td>
+                      <td>Final project presentations and wrap-up.</td>
+                      <td>Final project due date TBD around this time</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>Other Policies</h2>
+              <p>
+                A complete syllabus including policies on accommodations, late assignments,
+                academic integrity, and other course logistics will be posted closer to
+                the date of the course.
+              </p>
+            </section>
+          </main>
+        </div>
       </div>
 
-    </header>
+      <!-- SYLLABUS SECTION -->
+      <div id="syllabus" class="content-section">
+        <div class="page">
+          <header class="page-header">
+            <h1 class="course-title">Building LLM Reasoners</h1>
+            <div class="course-codes">CSCI-GA.3033-131 · DS-GA.3001-009</div>
 
-    <main>
-      <section class="section">
-        <h2 style="color: red;">The following syllabus is under construction and subject to change until January 2026.</h2>
-        <h2>Course Description</h2>
-        <p>
-          Large language models are a foundational building block of generative AI systems.
-          Modern LLMs go far beyond the capabilities of early LLMs like GPT-3 by demonstrating
-          the capacity for reasoning in natural language. This course provides a hands-on
-          crash course into what makes these models work, covering:
-        </p>
-        <ul>
-          <li>Fundamental building blocks like tokenizers and optimizers</li>
-          <li>Optimizations such as FlashAttention</li>
-          <li>
-            Approaches for learning reasoners such as supervised fine-tuning,
-            reinforcement learning, and inference-time methods
-          </li>
-        </ul>
-        <p>
-          Assignments will focus on implementation of these approaches. We will start with
-          a moderately intensive programming assignment requiring implementing a Transformer
-          language model from scratch and making it fast. You will be expected to do this
-          in the first few weeks of the semester.
-        </p>
-      </section>
+            <div class="course-meta">
+              <div><span class="meta-label">Instructor:</span> <a href="http://cs.utexas.edu/~gdurrett">Greg Durrett</a> (<a href="mailto:gdurrett@nyu.edu">gdurrett@nyu.edu</a>)</div>
+              <div><span class="meta-label">Lecture:</span> Friday 12:30pm–2:30pm · CIWW 101</div>
+              <div><span class="meta-label">TAs:</span> Shaswat Patel, Harry Wang (see Brightspace for contact and office hours)</div>
+              <div><span class="meta-label">Course contact:</span> <a>nyubuildingllmreasoners@googlegroups.com</a></div>
+            </div>
+          </header>
 
-      <section class="section">
-        <h2>Recommended Prerequisites</h2>
-        <ul>
-          <li>
-            CSCI-GA.2590 Natural Language Processing or equivalent.
-            You should be familiar with the Transformer architecture (fairly comfortable
-            with the material in
-            <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener noreferrer">this post</a>).
-          </li>
-          <li>CSCI-GA.2565 Machine Learning or equivalent</li>
-          <li>Deep learning or equivalent</li>
-          <li>Python programming experience, including PyTorch</li>
-          <li>Experience with concepts from probability and linear algebra</li>
-        </ul>
-      </section>
+          <main>
+            <section class="section">
+              <h2>Course Description</h2>
+              <p>
+                Large language models are a foundational building block of generative AI systems.
+                Modern LLMs go far beyond the capabilities of early LLMs like GPT-3 by demonstrating
+                the capacity for reasoning in natural language. This course provides a hands-on
+                crash course into what makes these models work, covering:
+              </p>
+              <ul>
+                <li>Fundamental building blocks like tokenizers and optimizers</li>
+                <li>Optimizations such as FlashAttention</li>
+                <li>Approaches for learning reasoners such as supervised fine-tuning, reinforcement learning, and inference-time methods</li>
+              </ul>
+              <p>
+                Assignments will focus on implementation of these approaches. We will start with
+                a moderately intensive programming assignment requiring implementing a Transformer
+                language model from scratch and making it fast. You will be expected to do this
+                in the first few weeks of the semester.
+              </p>
 
-      <section class="section">
-        <h2>Grading &amp; Components</h2>
-        <ul>
-          <li>25% Assignments (3 assignments)</li>
-          <li>25% Homework Quizzes (3–4 quizzes)</li>
-          <li>25% Midterm Exam</li>
-          <li>25% Final Project</li>
-        </ul>
-      </section>
+              <h3>Recommended Prerequisites</h3>
+              <ul>
+                <li>CSCI-GA.2590 Natural Language Processing or equivalent. You should be familiar with the Transformer architecture (fairly comfortable with the material in <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener noreferrer">The Illustrated Transformer</a>).</li>
+                <li>CSCI-GA.2565 Machine Learning or equivalent</li>
+                <li>Deep learning or equivalent</li>
+                <li>Python programming experience, including PyTorch</li>
+                <li>Experience with concepts from probability and linear algebra</li>
+              </ul>
+            </section>
 
-      <section class="section">
-        <h2>Assignments</h2>
-        <p>
-          Tentatively there are slated to be three programming assignments. We will follow up about GPU resources closer to the start of the semester.
-        </p>
-      </section>
+            <section class="section">
+              <h2>Lectures</h2>
+              <p>
+                Lectures will take place as scheduled on the course calendar. A complete schedule of lectures and assignments, with readings, is on the main website page.
+              </p>
+              <p>
+                All lectures will take place in-person. Recordings will be made available for students to watch later. Prerecorded videos may also be used to supplement the lectures, in order to enable class time to focus more on interactive problem solving and question answering.
+              </p>
+              <p>
+                <strong>Illness:</strong> If you become sick with COVID-19 or any other ailment and are unable to attend class, <strong>please contact the instructor if you need accommodation</strong> and we will work to support you.
+              </p>
+              <p>
+                <strong>Class Recordings:</strong> Class recordings are reserved only for students in this class for educational purposes. The recordings should not be shared outside the class in any form.
+              </p>
+              <p>
+                <strong>Office Hours:</strong> Office hours will be held in a mix of in-person and on Zoom, per the discretion of the course staff. Information will be posted on the main course page at the start of the semester.
+              </p>
+            </section>
 
-      <section class="section">
-        <h2>Schedule (Tentative)</h2>
-        <p class="schedule-note">
-          Topics, dates, and assignments are approximate and subject to change.
-          There will be a midterm exam, to be scheduled.
-        </p>
+            <section class="section">
+              <h2>Communication</h2>
+              <p>
+              All key announcements will be made in Brightspace. We will use Discord as a communication tool for answering questions related to the lectures, assignments, and projects. The registration link for Discord will be available on Brightspace. All assignment submissions should be made in Gradescope. If you'd like to message course staff privately, please email the course staff mailing list     <a>nyubuildingllmreasoners@googlegroups.com</a> .
+              </p>
+            </section>
 
-        <div class="table-wrapper">
-          <table class="schedule-table">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Topic</th>
-                <th>Details</th>
-                <th>Assignment</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Jan 23</td>
-                <td>Intro, Transformers Review</td>
-                <td>Course overview; expectations; review of the Transformer architecture.</td>
-                <td>Assignment 1 released</td>
-              </tr>
-              <tr>
-                <td>Jan 30</td>
-                <td>Tokenizers, Optimizers, and Tricks</td>
-                <td>Tokenizers, positional encodings, optimizers, and other stuff needed to make Transformer LLMs work.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Feb 6</td>
-                <td>Making LLMs Fast I</td>
-                <td>GPUs, memory layouts, and FlashAttention.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Feb 13</td>
-                <td>Making LLMs Fast II</td>
-                <td>Inference-time optimization, KV caching</td>
-                <td>Assignment 1 due · Assignment 2 released</td>
-              </tr>
-              <tr>
-                <td>Feb 20</td>
-                <td>Scaling Laws</td>
-                <td>Empirical scaling laws with connections to convergence rates of estimators, model/data/compute tradeoffs.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Feb 27</td>
-                <td>Training I: SFT &amp; RLHF</td>
-                <td>Supervised fine-tuning, reinforcement learning from human feedback, and how they're used to train LLMs</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Mar 6</td>
-                <td>Training II: GRPO &amp; RLVR</td>
-                <td>Training methods for modern reasoners</td>
-                <td>Assignment 2 due · Assignment 3 released</td>
-              </tr>
-              <tr>
-                <td>Mar 13</td>
-                <td>TBD</td>
-                <td>Topic to be announced.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Mar 20</td>
-                <td>No Class</td>
-                <td>Spring Break.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Mar 27</td>
-                <td>TBD</td>
-                <td>Topic to be announced.</td>
-                <td>Assignment 3 due</td>
-              </tr>
-              <tr>
-                <td>Apr 3</td>
-                <td>LLM Evaluation</td>
-                <td>Principles for evaluating LLMs, including statistical testing and benchmark design practices</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Apr 10</td>
-                <td>Multimodality</td>
-                <td>LLMs beyond text: vision, audio, and other modalities.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Apr 17</td>
-                <td>Agents</td>
-                <td>Tool calling, MCP, computer use agents, and agentic workflows.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Apr 24</td>
-                <td>TBD</td>
-                <td>Topic to be announced.</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>May 1</td>
-                <td>Project Presentations</td>
-                <td>Final project presentations and wrap-up.</td>
-                <td>Final project due date TBD around this time</td>
-              </tr>
-            </tbody>
-          </table>
+            <section class="section">
+              <h2>Coursework</h2>
+              <p>
+                The timeline of assignments is on the course calendar. Assignment specifications, code, and data will be made available on the course website and Brightspace. Grading breakdowns are as follows:
+              </p>
+              <ul>
+                <li><strong>Assignments:</strong> 25% of final grade (3 assignments)</li>
+                <li><strong>Homework Quizzes:</strong> 25% of final grade (3–4 quizzes)</li>
+                <li><strong>Midterm Exam:</strong> 25% of final grade</li>
+                <li><strong>Final Project:</strong> 25% of final grade</li>
+              </ul>
+              <p>
+                <strong>Religious Observance:</strong> A student who is absent from an examination or cannot meet an assignment deadline due to the observance of a religious holy day may take the exam on an alternate day or submit the assignment up to 24 hours late without penalty, if proper notice of the planned absence has been given. Notice must be given at least 14 days prior to the classes which will be missed. For religious holy days that fall within the first 2 weeks of the semester, notice should be given on the first day of the semester.
+              </p>
+              <p>
+                <strong>Illness and Medical Extensions:</strong> Extensions may be granted in cases of illness (including COVID-19), medical emergency, or other circumstances. In all cases, the student should inform the course staff as soon as is practical, and the extension must be negotiated <em>before the assignment's original due date</em>.
+              </p>
+              <p>
+                <strong>Midterm Extensions:</strong> Any conflict with the midterm exam should be brought up with the course staff as soon as possible. Extensions will typically <em>not</em> be granted for personal travel.
+              </p>
+              <p>
+                <strong>Policy on ChatGPT, Copilot, and other AI assistants:</strong> See below under "Academic Honesty" for guidance on how to use these in this course.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Assignments</h2>
+              <p>
+                The assignments will feature a combination of written questions and coding assignments with various scope. Detailed instructions for assignment completion and submission are given with each assignment.
+              </p>
+              <p>
+                <strong>Submission:</strong> Assignments will be submitted via Gradescope. At the beginning of the semester, you will be added to the Gradescope roster through Brightspace. Please do not register on Gradescope separately or change your email; this will cause the rosters to be out-of-sync. Coding portions of assignments will be autograded, and written portions will be assessed by course staff and returned with feedback.
+              </p>
+              <p>
+                <strong>Slip Days:</strong> Each student is given <strong>5</strong> slip days to use throughout the term. Any number of these days can be applied to any assignment to extend the deadline for that assignment by that many days. E.g., you can turn in Assignment 1 one day late and Assignment 3 one day late, using two slip days total. Slip days can only be used for assignments and not the quizzes, midterm, or final project. Slip days cannot be used fractionally: submitting an assignment 1 hour late incurs 1 slip day, 25 hours late incurs 2 slip days, etc. You do not need to ask for permission to use them, but the course staff will keep track of how many days were used.
+              </p>
+              <p>
+                <strong>Late Assignments:</strong> For each day late an assignment is turned in not covered by a slip day or negotiated extension, <strong>15%</strong> of the received grade for that assignment will be deducted. For example, an assignment that would have received 85% but is submitted one day late will receive 72.25% (85% × 0.85).
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Homework Quizzes</h2>
+              <p>
+                There will be 3–4 in-class quizzes throughout the semester. Each quiz will happen during the first portion of class. The quizzes will consist of questions (True/False, multiple choice, and short answer) that evaluate concepts covered during lectures in the weeks preceding the quiz. Prior to the first quiz, the course staff will post sample quiz questions to help with your preparation.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Midterm</h2>
+              <p>
+                There will be one <strong>in-class</strong> midterm as described on the course calendar. Students will be allowed one standard letter (8.5" x 11") page of notes during exams. Use of electronic communication devices (phones, laptops, calculators, ChatGPT, etc.) is banned during the exam.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Final Project</h2>
+              <p>
+                The final project consists of a project on a topic of your choosing. You may complete these projects in groups of 2-3. A project proposal will be submitted prior to the final project start and feedback will be provided by the course staff. Projects do not necessarily have to "work," but will be held to a high standard in terms of expected effort, insight, and technical sophistication.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Final Grades</h2>
+              <p>
+                Your final grade is computed based on the total points earned across all assignments. The final grade is mapped to a letter as follows, with grades on the boundary receiving the higher grade:
+              </p>
+              <div class="table-wrapper">
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>Letter Grade</th>
+                      <th>Cutoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>A</td><td>93.3</td></tr>
+                    <tr><td>A-</td><td>90</td></tr>
+                    <tr><td>B+</td><td>86.7</td></tr>
+                    <tr><td>B</td><td>83.3</td></tr>
+                    <tr><td>B-</td><td>80</td></tr>
+                    <tr><td>C+</td><td>76.7</td></tr>
+                    <tr><td>C</td><td>73.3</td></tr>
+                    <tr><td>C-</td><td>70</td></tr>
+                    <tr><td>D</td><td>65</td></tr>
+                    <tr><td>F</td><td>Below 65</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Depending on class performance, the instructors may shift these boundaries down to raise students' grades.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Academic Honesty</h2>
+              <p>
+                Students are encouraged to discuss lecture material, homework problems, and coding assignments with others! However, <strong>your final written solution or source code must be your own</strong>, excluding the final project, which may be completed in groups.
+              </p>
+              <p>You may not:</p>
+              <ul>
+                <li>Copy all or part of an assignment from a fellow student, the Internet, or AI</li>
+                <li>Bring answers into an exam, or consult an AI during an exam</li>
+                <li>Submit any work without appropriate attribution. In the final project, you must make clear when you are using code, data, figures, concepts, or any other artifacts from prior work.</li>
+              </ul>
+              <p>
+                You may consult external resources such as blog posts, YouTube videos, academic papers, GitHub repositories, AI assistants, and more. However, your use of such resources, particularly GitHub repositories, must be limited in the same way as discussions with other students: you can look at these to get an idea of how to solve a problem, but you should not take external code and submit it as part of your assignment, <strong>except for the final project when it is appropriately attributed.</strong>
+              </p>
+              <p>
+                Be sure you respect these policies when posting on Discord. Asking clarifying questions, addressing possible bugs in the provided code, etc. are fair game, but you should not discuss solutions in a substantive way that might spoil them for others. When in doubt, discuss privately with the instructors.
+              </p>
+              <p>
+                Students who violate these policies may receive a grade of zero on the assignment or exam in question or for the course overall, depending on the instructors' judgment and the severity of the infraction.
+              </p>
+
+              <h3>Policy on AI Assistants</h3>
+              <p>
+                Understanding the capabilities of these systems and their boundaries is a major focus of this class, and there's no better way to do that than by using them!
+              </p>
+              <ul>
+                <li><strong>We strongly encourage you to use AI assistants to understand concepts in AI and machine learning.</strong> You should see it as another tool like web search that can supplement understanding of the course material.</li>
+                <li><strong>You are allowed to use Claude Code/ChatGPT/etc. for programming assignments, but your usage must be limited in the same way as usage of other resources.</strong> You should come up with the high-level skeleton of the solution and an initial implementation yourself and use these tools primarily as coding assistants for debugging. If you and another student submit exactly the same code because you both generated it with Claude Code, we will treat that as if you had copied each others' solutions.</li>
+                <li><strong>You are permitted to use AI assistants for conceptual questions on assignments, but discouraged from doing so.</strong> These questions are meant to deepen your understanding of the course content, particularly in preparation for the midterm. Heavily relying on ChatGPT for your answers will negatively impact your learning.</li>
+              </ul>
+              <p>
+                An example of a good question is, <em>"Write a line of Python code to reshape a Pytorch tensor x of [batch size, seqlen, hidden dimension] to be a 2-dimensional tensor with the first two dimensions collapsed."</em> An example of a bad question would be to try to feed in a large chunk of the assignment code and copy-paste the problem specification from the assignment PDF. As a heuristic, it should be possible for you to explain what each line of your code is doing. If you have code in your solution that is only included because an assistant told you to put it there, then it is no longer your own work.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Academic Accommodations</h2>
+              <p>
+                Academic accommodations are available for students with disabilities. Please contact the <a href="https://www.nyu.edu/students/communities-and-groups/student-accessibility.html">Moses Center for Student Accessibility</a> (212-998-4980 or <a href="mailto:mosescsd@nyu.edu">mosescsd@nyu.edu</a>) for further information. Students who are requesting academic accommodations are advised to reach out to the Moses Center as early as possible in the semester for assistance. If you are already registered with the Moses Center, please deliver your Accommodation Letter to me as early as possible in the semester so we can discuss your approved accommodations and needs in this course.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Student Wellness</h2>
+              <p>
+                In a large, complex community like NYU, it's vital to reach out to others, particularly those who are isolated or engaged in self-destructive activities. Student wellness is the responsibility of all of us. The <a href="https://www.nyu.edu/students/health-and-wellness/wellness-exchange.html">NYU Wellness Exchange</a> is the constellation of NYU's programs and services designed to address the overall health and mental health needs of its students. Students can access this service 24 hours a day, seven days a week:
+              </p>
+              <ul>
+                <li>Email: <a href="mailto:wellness.exchange@nyu.edu">wellness.exchange@nyu.edu</a></li>
+                <li>Phone: (212) 443-9999</li>
+                <li>NYU Counseling Service: (212) 998-4780</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Diversity</h2>
+              <p>
+                It is our intent that students from all diverse backgrounds and perspectives be well served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that students bring to this class be viewed as a resource, strength and benefit. It is our intent to present materials and activities that are respectful of diversity: gender, sexuality, disability, age, socioeconomic status, ethnicity, race, and culture. Your suggestions are encouraged and appreciated. Please let the course staff know of ways to improve the effectiveness of the course for you personally or for other students.
+              </p>
+              <p>
+                Furthermore, at times throughout the semester, we will discuss the broader cultural impact of machine learning, NLP, and language technology. I ask that students approach these topics seriously and recognize the power technology has to both support and undermine efforts to create a more inclusive society.
+              </p>
+            </section>
+          </main>
         </div>
-      </section>
-
-      <section class="section">
-        <h2>Other Policies</h2>
-        <p>
-          A complete syllabus including policies on accommodations, late assignments,
-          academic integrity, and other course logistics will be posted closer to
-          the date of the course.
-        </p>
-      </section>
-    </main>
-
+      </div>
+    </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.content-section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetSection = this.getAttribute('data-section');
+
+          // Update active nav link
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+
+          // Show target section, hide others
+          sections.forEach(section => {
+            if (section.id === targetSection) {
+              section.classList.add('active');
+            } else {
+              section.classList.remove('active');
+            }
+          });
+
+          // Scroll to top
+          window.scrollTo(0, 0);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
