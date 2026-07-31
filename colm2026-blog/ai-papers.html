@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI submissions at COLM: theoryslop, slopterpretability, and papers in the age of agents</title>
+<style>
+  body {
+    font: normal 100% Cambria, Avenir Next, Times, serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    clear: both;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+    clear: both;
+  }
+  p, li {
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  a:link {
+    color: #7938A3;
+  }
+  a:visited {
+    color: #57068C;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+  }
+  figure.inline-figure {
+    float: right;
+    width: 230px;
+    max-width: 45%;
+    margin: 0.25rem 0 1rem 2rem;
+  }
+  figure.inline-figure img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  figure.inline-figure figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  @media (max-width: 576px) {
+    figure.inline-figure {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      margin: 1rem auto;
+    }
+  }
+  #main-nav {
+    background: aliceblue;
+    padding: 10px 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #main-nav img {
+    display: block;
+    margin: 0;
+    width: 140px;
+    height: auto;
+  }
+  #main-nav a {
+    font: normal 100% Cambria, Avenir Next, Times, serif;
+    text-decoration: none;
+    color: #212529;
+  }
+  #main-nav a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="https://colm.eventhosts.cc/"><img src="images/colm-logo.svg" alt="COLM logo"></a>
+  <a href="https://colm.eventhosts.cc/">COLM 2026 Website</a>
+</nav>
+<div class="container">
+
+<h1>AI submissions at COLM: theoryslop, slopterpretability, and papers in the age of agents</h1>
+
+<p>COLM 2026's deadline was March 31, 2026. Given the rise of coding agents in late 2025 and early 2026, this conference received a moderate number of agent-generated submissions. The call for papers stated that the following must be disclosed: <i>"using an LLM to originate research ideas, using an LLM to write original content in the paper (including references), using an LLM to generate data or plots, using an LLM for evaluation."</i></p>
+
+<p>This post details the program chairs' investigations and findings throughout the review process. As coding agents are moving quickly and tools are adapting, we do not intend this to be a prescription that other conferences should do exactly as we did. Rather, we describe our processes and our findings to enable others to learn from them.</p>
+
+<p><b>No paper was desk-rejected on the basis of a detector result, and no AI detector results were shown to reviewers or ACs.</b></p>
+
+<img src="images/ai-submissions-timeline.png" alt="Timeline of the AI-submission analysis process, from pre-review desk rejections in April 2026 through review, meta-reviews, and PC decisions culminating in analysis of decisions by July 2026">
+
+<h2>Pre-review: Automated Analysis with GPTZero</h2>
+
+<p>We coordinated with GPTZero to detect the use of AI in submissions. GPTZero ran two tools: (1) AI scoring on paper text (<em>not</em> using reference information); (2) hallucinated reference detection.</p>
+
+<h3>AI-scoring</h3>
+
+<p><strong>Process:</strong> GPTZero produced scores of each paper's AI use on a scale from 0-1, producing a total ordering of all submissions by amount of AI used.</p>
+
+<p>We subsequently double-checked these scores with Pangram. Pangram agreed that all of GPTZero's top 50 predicted AI papers were either &quot;AI&quot; or &quot;mixed&quot;.</p>
+
+<p>Based on these tool outputs and looking at a few hundred papers, we estimated that roughly 5% of papers used AI very heavily or were primarily AI-generated. This is a conservative estimate: a very sophisticated custom agent might have escaped detection. Furthermore, it is hard to draw a firm boundary here, as we see a wide range of use of AI, between polishing grammar to writing sections to writing entire papers. No punitive actions were taken on the basis of detector results alone.</p>
+
+<p>The PCs then inspected around 90 of the papers determined by GPTZero to be most AI-generated.</p>
+
+<p><strong>Actions:</strong></p>
+
+<ul>
+  <li>32 of these 90 papers (plus 14 others not in this set) were desk-rejected for violations of the LLM policy: cliques of authors submitting large numbers of papers, at least some of which did not disclose the use of LLMs in accordance with the policy. Usage of LLMs was substantiated through hallucinations in citations or other clues in paper content, not detector results.</li>
+<li>11 papers were desk-rejected for being very poor quality or having very obvious hallucinations. (Other papers beyond these 11 were desk-rejected on similar grounds after being flagged by area chairs.)</li>
+<li>No paper was desk-rejected purely on the basis of a detector result.</li>
+</ul>
+
+<p>Overall, roughly 2% of papers were desk-rejected for these criteria, not counting other desk-rejections due to formatting, anonymity violations, etc.</p>
+
+<p>The cost-benefit tradeoff of more desk rejection was not favorable given our established processes. Due to the large gray area, substantial amounts of PC work would've been needed to confidently reject another 50-100 papers. This would only represent around 3% of submissions. We instead prioritized managing the review process and allowed the rest of the papers to stand for review.</p>
+
+<h3>Reference detection</h3>
+
+<p><strong>Process:</strong> Hallucinated references were flagged by GPTZero across all submitted papers. The list allowed us to identify papers with completely hallucinated citations and those with large numbers of reference errors.</p>
+
+<p>We saw three kinds of hallucinated references detected:</p>
+
+<ol>
+<li>Completely fabricated references</li>
+<li>Incorrect authors, but otherwise correct title and some correct metadata (we could tell what paper was intended to be cited here)</li>
+<li>False positives: blog posts or papers from closed-access journals not easily discoverable on the web. Because of these false positives, we do not report an overall number of hallucinated references.</li>
+</ol>
+
+<p>The PCs desk-rejected around 20 papers that had completely fabricated references in our analysis. Papers with only a few cases of "incorrect authors" were allowed to stand for review.</p>
+
+<h2>Review stage</h2>
+
+<p>Remaining papers went through review as normal, without any indication of AI usage shown to reviewers or area chairs. Reviewers and ACs in some cases flagged cases of papers that they believed to be AI-generated, or hallucinated references that they traced down themselves. However, this was pretty rare (&lt;1% of submissions).</p>
+
+<h2>Post-review: PC analysis</h2>
+
+<figure class="inline-figure">
+  <img src="images/ai-submissions-accept-rates.png" alt="Bar chart of acceptance rate by rank of paper by AI score: papers ranked 1-50 by AI score had a 0% acceptance rate, papers ranked 51-100 had a 10% acceptance rate, and papers ranked 101-200 had a 13% acceptance rate, all well below the overall accept rate of 29%">
+  <figcaption>Preliminary acceptance rate by rank of paper by AI score, compared to the overall accept rate of 29%.</figcaption>
+</figure>
+
+<p>After reviewers and meta-reviewers (ACs) produced their recommendations and PCs were making final decisions, we re-examined the top AI-detected papers according to GPTZero. After a first-pass bucketing based primarily on AC recommendations, we observed the following acceptance rates in this pool; see figure. To be precise, 0 papers out of the top 50 AI-scored papers were recommended for acceptance. 5 papers out of the 51-100 top AI-detected papers were recommended for acceptance, representing 10% of this pool.</p>
+
+<p>Note that these statistics do not reflect final PC decisions, which included more scrutiny of edge cases. Five of these 200 papers ended up being rejected after this second phase.</p>
+
+<h2>What are these papers? &quot;Theoryslop&quot; and &quot;slopterpretability&quot;</h2>
+
+<p>Many AI-generated papers were low-quality and peer review weeded them out effectively:</p>
+
+<ul>
+<li>Mostly text: position papers or proposals of frameworks/taxonomies</li>
+<li>Underdeveloped experimental papers: often incremental ideas, insufficient evaluation and comparison to related work, with baselines &quot;inspired&quot; by other papers but not rigorously evaluated against those prior methods.</li>
+</ul>
+
+<p>Two types of papers were more likely to get through peer review.</p>
+
+<p><strong>Theoryslop:</strong></p>
+
+<ol>
+<li>Proposes a relationship or some other new construct, like a scaling law</li>
+<li>Proves a theorem or two about this construct</li>
+<li>Validates this construct experimentally, e.g., by fitting coefficients of the scaling law</li>
+</ol>
+
+<p>Because this paper's contribution is primarily conceptual/theoretical, there's less of a need to have a very strong empirical core like baseline comparisons. Because COLM is not a CS/ML theory venue, the theory wasn't strongly evaluated on axes like taste or of interest to the CS/ML theory communities. Finally, because agents are pretty good at math, they can crank out a lot of theory, much of which is probably correct.</p>
+
+<p>A few theoryslop papers were found to contain fatal errors by very hardworking reviewers. However, this is not a scalable solution. Without a uniformly exceptional review pool, such papers will not always be checked closely enough to find errors.</p>
+
+<p><strong>Slopterpretability:</strong></p>
+
+<ol>
+<li>Carves off a narrow question: e.g., what is the mechanism behind refusal in multi-turn jailbreaks? (not a real submitted paper)</li>
+<li>Performs interpretability analysis using off-the-shelf tools, like circuit discovery or SAEs</li>
+<li>Reports the results and draws conclusions, sometimes with exaggeration</li>
+</ol>
+
+<p>Note: see this excellent post <a href="https://www.lesswrong.com/posts/r7FBQ8XDs6qBYc4K4/an-analysis-of-ai-generated-content-at-the-mechanistic">An Analysis of AI-Generated Content at the Mechanistic Interpretability Workshop</a> for a description of these papers at the mechanistic interpretability workshop at ICML.</p>
+
+<p>Theoryslop and slopterpretability papers can get high scores because: (1) Their main flaw is the quality and impact of the research question, which junior reviewers may find it hard to assess. (2) They are very technical, which both &quot;pure&quot; human reviewers and those leaning on LLMs may favor. (Note: we also conducted analysis of AI in reviewing as well but do not discuss here.)</p>
+
+<h2>The best of the AI papers</h2>
+
+<p>Some papers ranked highly on AI detector scores and were recommended for acceptance even after careful consideration.</p>
+
+<ol>
+<li>A &quot;false positive&quot;: the paper does not look obviously AI-generated. This could either be a true miss on the detector, or AI was used to prepare the paper, but in a human-assisted way. That is, perhaps an initial draft was cleaned up with an AI in a way that triggers the detector, but the paper's &quot;bones&quot; are human despite the lexical style being AI.</li>
+<li>A &quot;true positive&quot;: the paper is AI-written, but the underlying contribution is very solid. For instance, the paper presents a useful dataset which has been made available. In this case, the presentation of the paper matters, but is less important than for something like a position paper. The usefulness of the artifact outweighs any subpar, AI-trope-ridden writing of the paper.</li>
+</ol>
+
+<h2>Recommendations</h2>
+
+<ol>
+<li>Running Pangram and GPTZero provides a baseline measurement of AI usage in submitted papers and helps identify bad actors submitting many AI-authored papers.</li>
+<li>We should not take a very draconian policy on AI detection (e.g., we should not reject any paper with too-high Pangram score). Trying to detect the usage of AI separate from paper quality will be increasingly hard. If a paper has an authentic human-vouched contribution, the use of AI to write the paper is not automatically disqualifying.</li>
+<li>The conference should employ a heavier desk-rejection phase. This may require a separate set of &quot;pre-reviewers&quot; who work in combination with detector results to reject poor-quality papers which were generated by AI.</li>
+<li>Most radical: the conference may have to narrow the scope of allowed contributions. Theoryslop and slopterpretability are hard to manage in the same review process as other papers. The specialized expertise needed to review these papers presents a challenge given the volume at which these papers can be submitted.</li>
+</ol>
+
+<h2>Disclaimers</h2>
+
+<p>COLM is different from ML and *CL conferences in two big ways. First, it is much smaller. Second, it is not ranked on rankings like CORE, so papers in COLM &quot;count&quot; less than those in other venues for some researchers. As a result, it may be less of an attractive target for gaming. (We believe the quality of COLM papers is at least as high as those at other venues, and we don't view COLM acceptance as any less prestigious!)</p>
+
+<hr>
+
+<p><strong>COLM Senior Program Chair:</strong> Greg Durrett<br>
+<strong>COLM PCs:</strong> Aviral Kumar, Yulia Tsvetkov, and Yoon Kim</p>
+
+<p><em>Thanks to GPTZero and Pangram for providing credits and conducting analyses in support of COLM. Thanks to Yoav Artzi (general chair) and Jonathan Kummerfeld for comments on an early draft of this post.</em></p>
+
+</div>
+</body>
+</html>
