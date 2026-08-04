@@ -89,6 +89,32 @@
       display: block;
     }
 
+    /* Lab rows: Thursday section/lab meetings, shaded to distinguish from lecture rows */
+    .lab-row td {
+      background: var(--bg-muted);
+    }
+
+    /* Draft policy callout, pending staff confirmation */
+    .draft-policy {
+      background: #eef4fb;
+      border: 1px solid #a9c6e8;
+      border-radius: var(--radius-sm, 6px);
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 0.95em;
+    }
+    .draft-policy .draft-label {
+      margin: 0 0 8px;
+      font-size: 0.8em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #3a6ea5;
+    }
+    .draft-policy p:last-child {
+      margin-bottom: 0;
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .layout {
@@ -155,7 +181,6 @@
               How can we empower machines to understand and generate human language, enabling them to summarize complex information, answer questions intelligently, or engage in meaningful conversation? This course dives into the principles and cutting-edge tools that make these capabilities possible. Students will explore three key paradigms in Natural Language Processing (NLP): supervised learning, the pretrain-then-finetune approach, and the latest advances in large language models, with a particular emphasis on representation learning techniques. The course combines theoretical foundations with practical applications. Students are expected to engage with research papers and gain hands-on experience through coding assignments and course projects.
             </section>
 
-            <!-- DRAFT: prerequisites below are a first pass; please review and edit. -->
             <section class="section">
               <h2>Recommended Prerequisites</h2>
               <p>Students are expected to have a solid mathematics background and strong programming skills.
@@ -203,9 +228,25 @@
                       </td>
                       <td>Assignment 1 released</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Sep 3</td>
+                      <td>Lab: Python/numpy review; BoW</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Sep 9</td>
                       <td>Embeddings (Durrett)</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Sep 10</td>
+                      <td>Lab: Word vector algebra</td>
                       <td>
                         <!-- Readings: TBD -->
                       </td>
@@ -219,6 +260,14 @@
                       </td>
                       <td>Assignment 1 due &middot; Assignment 2 released &middot; In-class quiz 1</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Sep 17</td>
+                      <td>Lab: HPC and PyTorch tutorial</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Sep 23</td>
                       <td>Transformers/LLMs (Durrett)</td>
@@ -227,9 +276,25 @@
                       </td>
                       <td>&mdash;</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Sep 24</td>
+                      <td>Lab: Transformer exercises</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Sep 30</td>
                       <td>Generation and Decoding (Ravfogel)</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Oct 1</td>
+                      <td>Lab: Decoding exercises</td>
                       <td>
                         <!-- Readings: TBD -->
                       </td>
@@ -243,9 +308,25 @@
                       </td>
                       <td>Assignment 2 due &middot; Assignment 3 released &middot; In-class quiz 2</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Oct 8</td>
+                      <td>Lab: Prompting exercises</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Oct 14</td>
                       <td>Post-training (Ravfogel)</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Oct 15</td>
+                      <td>Lab: RLHF review</td>
                       <td>
                         <!-- Readings: TBD -->
                       </td>
@@ -259,6 +340,14 @@
                       </td>
                       <td>&mdash;</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Oct 22</td>
+                      <td>Lab: Efficient inference (quantization, etc.)</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Oct 28</td>
                       <td>Midterm (TAs)</td>
@@ -266,6 +355,14 @@
                         <!-- Readings: TBD -->
                       </td>
                       <td>Assignment 3 due &middot; Assignment 4 released</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Oct 29</td>
+                      <td>No section</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
                     </tr>
                     <tr>
                       <td>Nov 4</td>
@@ -275,6 +372,14 @@
                       </td>
                       <td>Final project proposals due</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Nov 5</td>
+                      <td>Lab: Eval landscape of LLMs</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Nov 11</td>
                       <td>Interpretability (Ravfogel)</td>
@@ -283,6 +388,14 @@
                       </td>
                       <td>Assignment 4 due &middot; Final projects assigned</td>
                     </tr>
+                    <tr class="lab-row">
+                      <td>Nov 12</td>
+                      <td>Lab: Interpretability</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
                     <tr>
                       <td>Nov 18</td>
                       <td>Agents (Durrett)</td>
@@ -290,6 +403,14 @@
                         <!-- Readings: TBD -->
                       </td>
                       <td>In-class quiz 3</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Nov 19</td>
+                      <td>Lab: Agents</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
                     </tr>
                     <tr>
                       <td>Nov 25</td>
@@ -300,6 +421,14 @@
                     <tr>
                       <td>Dec 2</td>
                       <td>TBD (Ravfogel)</td>
+                      <td>
+                        <!-- Readings: TBD -->
+                      </td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr class="lab-row">
+                      <td>Dec 3</td>
+                      <td>Lab: Project help</td>
                       <td>
                         <!-- Readings: TBD -->
                       </td>
@@ -342,26 +471,15 @@
             <section class="section">
               <h2>Course Description</h2>
               <p>
-                This course is an introduction to natural language processing (NLP) with an
-                emphasis on representation learning and large language models (LLMs). We will
-                cover the core building blocks of modern NLP systems &mdash; word and sequence
-                representations, the Transformer architecture, and the pretraining and
-                post-training pipeline used to build today's LLMs &mdash; as well as how to
-                evaluate, interpret, and build applications (including agents) on top of these
-                models.
-              </p>
-              <p>
-                Assignments focus on hands-on implementation: you'll build a linear and a neural
-                text classifier from scratch, implement a Transformer language model, work with
-                tokenization and LLM inference, and fine-tune a pretrained LLM.
+              How can we empower machines to understand and generate human language, enabling them to summarize complex information, answer questions intelligently, or engage in meaningful conversation? This course dives into the principles and cutting-edge tools that make these capabilities possible. Students will explore three key paradigms in Natural Language Processing (NLP): supervised learning, the pretrain-then-finetune approach, and the latest advances in large language models, with a particular emphasis on representation learning techniques. The course combines theoretical foundations with practical applications. Students are expected to engage with research papers and gain hands-on experience through coding assignments and course projects.
               </p>
 
               <h3>Recommended Prerequisites</h3>
+              <p>Students are expected to have a solid mathematics background and strong programming skills.
               <ul>
-                <li>An introductory machine learning course or equivalent</li>
-                <li>Familiarity with deep learning is helpful but not required &mdash; we will cover the necessary background</li>
-                <li>Python programming experience, including PyTorch</li>
-                <li>Experience with concepts from probability and linear algebra</li>
+                <li>Probability, statistics, linear algebra (DS-GA.1002, MATH-UA.140, MATH-UA.235)</li>
+                <li>Algorithms and data structures (CSCI-UA.102)</li>
+                <li>Basic knowledge in machine learning (DS-GA.1003, CSCI-UA.0473). We will not spend a significant amount of time on machine learning basics so some prior exposure to the supervised learning framework (e.g., loss functions, SGD) is expected.</li>
               </ul>
             </section>
 
@@ -505,6 +623,9 @@
               <p>
                 Students who violate these policies may receive a grade of zero on the assignment or exam in question or for the course overall, depending on the instructors' judgment and the severity of the infraction.
               </p>
+
+                <p><strong>Collaboration disclosure:</strong> When you discuss an assignment with classmates, you must note the names of everyone you discussed it with in your submission.</p>
+                <p><strong>AI usage disclosure:</strong> If you use an AI assistant (ChatGPT, Claude Code, Copilot, etc.) on an assignment, you must (1) briefly describe how you used it and (2) cite any content it generated that appears in your submission.</p>
 
               <h3>Policy on AI Assistants</h3>
               <p>
