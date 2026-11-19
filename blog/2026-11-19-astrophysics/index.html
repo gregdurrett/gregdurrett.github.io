@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In defense of astrophysics</title>
+<style>
+  body {
+    font: normal 100% Cambria, Avenir Next, Times, serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .post-date {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    clear: both;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+    clear: both;
+  }
+  p, li {
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  a:link {
+    color: #7938A3;
+  }
+  a:visited {
+    color: #57068C;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+  }
+  figure {
+    margin: 2rem 0;
+  }
+  figure img {
+    margin: 0 auto 0.5rem;
+  }
+  figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+  }
+  blockquote {
+    margin: 1.2rem 0;
+    padding: 0.2rem 1.2rem;
+    border-left: 3px solid #ddd;
+    color: #444;
+  }
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  #main-nav {
+    background: aliceblue;
+    padding: 10px 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #main-nav a {
+    font: normal 100% Cambria, Avenir Next, Times, serif;
+    text-decoration: none;
+    color: #212529;
+  }
+  #main-nav a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="../../index.html">&larr; Greg Durrett</a>
+</nav>
+<div class="container">
+
+<h1>In defense of astrophysics</h1>
+
+<p class="post-date">November 19, 2026</p>
+
+<img src="images/astrophysics-graphic.png" alt="A knight bearing an astrophysics-themed shield faces down a crowd of robots holding signs that say 'ChatGPT says otherwise!' and 'AI couldn't replicate it'">
+
+<p>This post <a href="https://x.com/CJHandmer/status/2122609626588061816">https://x.com/CJHandmer/status/2122609626588061816</a> has been making the rounds on X. The post claims to use Claude Opus 5.5 to identify 872 major errors in published astrophysics papers, described at <a href="https://science.caseyhandmer.com/physics/">https://science.caseyhandmer.com/physics/</a></p>
+
+<p>The specifics of this analysis have serious issues. A lot of the &quot;errors&quot; identified aren't human errors at all; they're AI errors. Human experts were able to spot them quickly. These mistakes in the analysis lead to serious overstatements in the conclusion.</p>
+
+<p>The goal of using AI to fix errors in scientific literature is great! But ironically, the outcome of this endeavor has been spending human time fixing AI's errors, not the other way around.</p>
+
+<h2>The claims</h2>
+
+<p>The post claims:</p>
+
+<blockquote>We indexed about 150,000 papers, audited 50,000 for issues, and did progressively more thorough checks on thousands more. We found nearly 1000 major errors that got cited many times, most are still uncorrected.</blockquote>
+
+<p>The vast majority of papers were screened for shallow criteria. Here's what the website says:</p>
+
+<figure>
+  <img src="images/screening-summary.png" alt="Screenshot titled 'Every paper gets screened' describing the screening of 50,269 papers for paper-mill language, chatbot residue, shared text, retractions, and TODO/FIXME notes, finding very little wrong">
+</figure>
+
+<p>The 50,000 papers were checked for things like plagiarism, retractions, or LLM-generated content. This check found very little.</p>
+
+<p>Continuing on, only 200 most-cited papers were checked in detail, plus 459 added in a subsequent pass. A deeper dive on this 659 leads to the headline finding of 872 &quot;major errors&quot;.</p>
+
+<h2>The identified &quot;errors&quot;</h2>
+
+<p>I'm a computer scientist by training, but I work with astronomers as part of the NSF-Simons Institute for Cosmic Origins (<a href="https://cosmicai.org/">@CosmicAI_Inst</a>). I was curious to understand what Claude found here a bit more. My colleague Paul Torrey from University of Virginia is a computational astrophysicist. He took the time to look at a few of these claims for papers he was familiar with. He shared his analysis with me, which I'm reproducing here.</p>
+
+<p>Regarding the first claimed error (<a href="https://arxiv.org/abs/1504.02097">https://arxiv.org/abs/1504.02097</a>):</p>
+
+<figure>
+  <img src="images/error1-mzr-evolution.png" alt="Screenshot of error 1 of 872: 'Agreement with observed MZR evolution relies on mixing calibrations across redshift', for the paper 'The origin and evolution of the galaxy mass-metallicity relation' (Ma, Hopkins, Faucher-Giguere et al., 2015)">
+</figure>
+
+<p>Paul's analysis of this paper was that saying &quot;simulations match observations&quot; is perhaps generous, but is backed up by evidence. It's not an &quot;error&quot;, let alone a moderate one.</p>
+
+<p>The &quot;correct&quot; claim is: (a) not a sentence, nor really a claim, and borderline not-readable and (b) overemphasizes one particular calibration (PP04) which the field generally avoids owing to known uncertainty with individual calibrations.</p>
+
+<p>(Incidentally, Paul is an author on one of the &quot;green dot&quot; papers critiquing their claim.)</p>
+
+<p>Regarding the fourth claimed error (<a href="https://arxiv.org/abs/1707.07010">https://arxiv.org/abs/1707.07010</a>):</p>
+
+<figure>
+  <img src="images/error4-momentum-conservation.png" alt="Screenshot of error 4 of 872: 'Per-neighbour sub-grid boost breaks the claimed exact momentum conservation', for the paper 'How to model supernovae in simulations of star and galaxy formation' (Hopkins, Wetzel, Keres et al., 2018)">
+</figure>
+
+<p>The paper presents a method for distributing an explosion's momentum to the surrounding gas. The claimed error is that momentum is not preserved exactly: an explosion yields a net push in some direction, which is not physically possible.</p>
+
+<p>Paul is very familiar with this subject because he directly worked on this and ported a version of the described algorithm to another codebase. He confirmed from direct tests that it conserves momentum to machine precision, consistent with the claim made in the paper.</p>
+
+<p>The AI's revised claim relies on the AI's own reimplementation of the algorithm from the paper (&quot;per event in my reimplementation&quot;). However, this reimplementation is not correct.</p>
+
+<p>In the paper's method, each surrounding parcel of gas is attributed a share of the explosion's momentum, plus a small &quot;boost&quot; term. Then, a balancing step adjusts those momentum values so that, added together, they cancel exactly and the explosion produces no net push. The paper's main diagram (Figure 1) shows this method.</p>
+
+<p>However, the AI implementation first does the balance step, then does the boost step. Implementing the steps in this order results in an imbalance. Put simply, the AI reconstructed the method incorrectly, measured a flaw in its own reconstruction, and attributed it to the paper. The paper's equations, read in isolation, can perhaps suggest the wrong order, but the figure resolves the question. And, most importantly, any scientist familiar with the method &ndash; or any human expert that takes time to think deeply about the problem &ndash; would have caught the conflict. Before publicly flagging this paper as containing an error and posting to the internet, a responsible human scientist would have stopped to ask: might I be the one with a misunderstanding here?</p>
+
+<p>Finally, Paul checked error 90 (<a href="https://arxiv.org/pdf/1408.6842">https://arxiv.org/pdf/1408.6842</a>) since he's an author on that paper:</p>
+
+<figure>
+  <img src="images/error90-radiative-efficiency.png" alt="Screenshot of error 90 of 872: 'Radiative efficiency is not degenerate with feedback efficiency: it sets the Eddington cap and the radio-mode switch', for the paper 'The Illustris simulation: the evolving population of black holes across cosmic time' (Sijacki, Vogelsberger, Genel et al., 2015)">
+</figure>
+
+<p>This wording is perhaps slightly overstated. The epsilon_r term impacts another part of the model as well that epsilon_f does not, so it is not completely degenerate. However, the paper's actual claim is about the feedback energy budget. The paper already acknowledges that the trade-off isn't exact, and this particular statement doesn't impact the main conclusions. An expert reader would understand &quot;degenerate&quot; here as a statement about feedback energy. The extra dependence might be commented on in a footnote, but is essentially a detail, not an error in the paper or its results.</p>
+
+<p><strong>Summary:</strong> Across these three cases, we have one complete miss from the AI (the AI made a mistake in reimplementation), one minor difference in interpretation, and one claim that wouldn't substantively mislead a reader when taken in context. I wouldn't expect any of these to be &quot;corrected&quot; in follow-up work! (These three claims were not cherry-picked; they were three that we happened to investigate due to being early in the list and ones that Paul was familiar with.)</p>
+
+<p>(The idea that AI fixates on minor and often invented errors has been noticed in the context of AI reviewer agents as well; see survey results in Figure 2 of <a href="https://arxiv.org/pdf/2604.13940">https://arxiv.org/pdf/2604.13940</a>.)</p>
+
+<h2>What astronomers are doing</h2>
+
+<p>The post claims:</p>
+
+<blockquote>Bottom line: AI can speed up quantitative science by &gt;1000x with no further model improvement required. But I'm seeing no evidence of this being pushed within universities, only academics complaining about labs dropping math proofs.</blockquote>
+
+<p>The author seems to assume that academic researchers have their heads in the sand and are stuck in old models of writing papers filled with errors rather than adopting this new paradigm.</p>
+
+<p>There are likely some researchers who behave like this. However, it strongly mischaracterizes the astronomers I've interacted with. Many of them are equally aware of coding agents as my colleagues in computer science. Paul did some preliminary work with a coding agent to scope out projects and identify datasets much as the author of this post is suggesting! Finally, I spoke to another researcher using sophisticated teams of agents with a vibe-coded visualization to debug issues with the Gemini telescope.</p>
+
+<p>Moreover, the idea that universities aren't embracing AI is out of touch. At NYU (my university), the Center for Data Science has four lines to hire in AI for science. UT Austin declared 2024 the &quot;year of AI.&quot; Beyond CosmicAI, the other NSF AI Institutes (<a href="https://www.nsf.gov/focus-areas/si/institutes">https://www.nsf.gov/focus-areas/si/institutes</a>) are advancing the intersection of AI and several scientific disciplines. A huge amount of grant funding is currently tied to work in AI. Academics aren't just sitting this out!</p>
+
+<h2>Damage to science</h2>
+
+<p>The author of this post isn't the only person engaged in this.</p>
+
+<p>My PhD students have received two recent emails giving us a heads up about &quot;errors&quot; identified in our papers through a similar AI process. One is a minor error in a dataset potentially affecting up to 3% of the examples; while it's a real error, our human validation step already ruled out the possibility of this error affecting the final results. The other error was entirely misconstrued by the AI and is already reflected in the paper's analysis.</p>
+
+<p>These criticisms of the literature's validity do two things. First, they force us to spend time addressing them, even if they're unfounded. Critique and hardening of results in the literature is good! (Michael Frank has done some excellent work here: <a href="https://x.com/mcxfrank/status/2120188287990255902">https://x.com/mcxfrank/status/2120188287990255902</a>.) But the false positives here make it clear that this was not a genuine effort to improve the literature. Human time is wasted debugging someone else's coding agent.</p>
+
+<p>Second, since these doubts can be raised far more quickly than they can be addressed, they erode trust in the scientific enterprise. The framing of this post suggests that &quot;academic publishing is dead&quot;, using this bag of results to question the value of the entire literature. Rethinking publication models is great! But announcing that papers are dead because they can be written by Claude, when no evidence has been provided for that claim, misses the mark. This critique is a bad faith attempt to discredit science and academic research. And, ironically, this critique of the academic literature would have been rejected by the standard academic literature peer review process, not because it's critical of academic publishing, but because it's riddled with major errors and overstatements.</p>
+
+<p>Astronomy has lots of interesting questions that AI will help with, but which also need large teams of humans to figure out what questions to ask, operate telescopes, rigorously analyze data, debate and propose theories, and more. The CosmicAI Institute, our collaborators, and a host of others in the field will keep pushing towards this goal, with teams of great scientists and plenty of AI along the way. Join us: <a href="https://cosmicai.org/">https://cosmicai.org/</a></p>
+
+<p><em>Thanks to Paul Torrey, Phil Hopkins, Jessy Li, and Claude-Andr&eacute; Faucher-Gigu&egrave;re for comments on the post.</em></p>
+
+</div>
+</body>
+</html>
